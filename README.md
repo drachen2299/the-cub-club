@@ -8,11 +8,20 @@ Project 3 Full Stack group project for GA using: Auth, MongoDB/Mongoose, Express
 
 ## Project Name
 
-Undecided
+The Cub Club
 
 ## Project Description
 
+The Cub CLub is a Social MMO/Virtual World where players can interact, message and play with eachother as custom 8bit bears. 
 
+The object of the game is social interaction.
+
+"I as a User would like to talk to other people around the world as an 8bit Bear".
+
+
+
+have mailbox - clicking mailbox modal appears that allows you to select the user and send them a message -- 3 messages per user max with a delete 
+option.
 
 ## API and Data Sample
 
@@ -27,7 +36,7 @@ Undecided
 
 
 #### MVP
-
+- 
 
 
 #### PostMVP
