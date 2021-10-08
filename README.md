@@ -33,10 +33,33 @@ Undecided
 
 ## Priority Matrix
 
+## Project Schedule
+
+| Day        | Deliverable                                   | Status   |
+| ---------- | --------------------------------------------- | -------- |
+| Oct 11/21  | Pitch Due                                     |          |
+| Oct 13/21  | MVP Due                                       |          |
+| Oct 18/21  | Presentation                                  |          |
 ## Timeframes
 
-| Component             | Priority | Estimated Time | Time Invested | Actual Time |
-| --------------------- | :------: | :------------: | :-----------: | :---------: |
-| Total                 |    l     |     hrs        |     hrs       |    hrs      |
+| Component                     | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Total                         |          |     42hrs      |     42hrs     |    42hrs    |
 
-# Change log
+## SWOT Analysis
+
+### Strengths:
+
+
+
+### Weaknesses:
+
+
+### Opportunities:
+
+
+### Threats:
+
+
+
+### Citations
