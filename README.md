@@ -1,7 +1,10 @@
 # project-3-charizard
-Project 3 Full Stack group project for GA using: Auth, MongoDB/Mongoose, Express, React
+
 
 # Project Overview
+Nate Shim, Rachel Perez, Ben Lowry(Lead)
+
+Project 3 Full Stack group project for GA using: Auth, MongoDB/Mongoose, Express, React
 
 ## Project Name
 
