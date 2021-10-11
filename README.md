@@ -1,5 +1,7 @@
 # Project Three
 
+<img src="./mockups/logo.png">
+
 ## Members
 - Nate Shim
 - Rachel Perez
