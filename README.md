@@ -35,6 +35,70 @@ The object of the game is social interaction.
 _Please provide a sample of how you intend to build your models. A Schema object for each of your models is ideal._
 
 ```json
+/users/all
+{
+    "_id": "616471b0a7e9a258d095cce8",
+    "username": "beeboop12",
+    "email": "beeb@email.com",
+    "bear": {
+      "_id": "6164709b5c410e950476c741",
+      "color": "panda",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:12:59.845Z",
+      "updatedAt": "2021-10-11T17:12:59.845Z"
+    }
+```
+```json
+/bears/all
+
+{
+    "_id": "6164709b5c410e950476c73e",
+    "color": "black",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c73f",
+    "color": "brown",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c740",
+    "color": "white",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c741",
+    "color": "panda",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  }
+  ```
+
+  ```json
+  /messages/all
+   {
+    "_id": "616479575c93675128ec084f",
+    "title": "nemo sint assumenda et incidunt earum",
+    "author": {
+      "_id": "616471b0a7e9a258d095cce8",
+      "username": "beeboop12",
+      "email": "beeb@email.com",
+      "bear": "6164709b5c410e950476c741",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:17:36.126Z",
+      "updatedAt": "2021-10-11T17:17:36.126Z"
+    }
+  ```
+
+
+
 
 ```
 
@@ -76,11 +140,16 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ## Ben
 ### Strengths:
+- I have a pretty good handle on the backend 
 
 ### Weaknesses:
+- Staying on track and not going down rabbit holes 
 
 ### Opportunities:
+- Managing tasks will help me code in a team environment better
 
 ### Threats:
+- Keeping the README and kanban board up to date
+- Managing my OWN time
 
 ### Citations
