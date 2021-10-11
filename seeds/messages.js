@@ -4,23 +4,23 @@ const Message = require("../models/message");
 const faker = require("faker");
 
 const createMessage = async () => {
-    const user = await User.findOne({ username: "beeboop12" });
+    const sender = await User.findOne({ username: "beeboop12" });
+    const derpherder31 = await User.findOne({ username: "derpherder31" });
+    const herrderr543 = await User.findOne({ username: "herrderr543" });
     const newMessage = [
         {
             title: faker.lorem.words(6),
-            author: user._id,
-            message: faker.lorem.paragraph()
+            message: faker.lorem.paragraph(),
+            recipient: derpherder31._id,
+            sender: sender._id
         },
         {
             title: faker.lorem.words(6),
-            author: user._id,
-            message: faker.lorem.paragraph()
-        },
-        {
-            title: faker.lorem.words(6),
-            author: user._id,
-            message: faker.lorem.paragraph()
+            message: faker.lorem.paragraph(),
+            recipient: herrderr543._id,
+            sender: sender._id
         }
+        
     ]
     await Message.insertMany(newMessage);
 };

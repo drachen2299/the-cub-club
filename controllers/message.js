@@ -4,7 +4,7 @@ const faker = require("faker");
 
 const findAllMessages = async (req, res) => {
     try {
-        const messages = await Message.find().populate("author");
+        const messages = await Message.find().populate("sender").populate("recipient");
         res.status(200).json(messages);
     } catch (error) {
         res.status(500).json({error: error.message});

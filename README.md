@@ -80,9 +80,19 @@ The object of the game is social interaction.
   ```json
   /messages/all
    {
-    "_id": "616479575c93675128ec084f",
-    "title": "nemo sint assumenda et incidunt earum",
-    "author": {
+    "_id": "6164b6a8bb8f0281c42f1c42",
+    "title": "esse tenetur voluptate dolores est et",
+    "recipient": {
+      "_id": "616471b0a7e9a258d095ccea",
+      "username": "herrderr543",
+      "email": "heer543@email.com",
+      "bear": "6164709b5c410e950476c741",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:17:36.127Z",
+      "updatedAt": "2021-10-11T17:17:36.127Z"
+    },
+    "message": "Fuga atque corporis labore. At cum maiores et. Quia qui explicabo nam aut dolor magnam libero. Voluptatum sit et quibusdam qui est velit ipsa numquam laborum. Consequuntur nesciunt non et ad consectetur minima. Dolor maxime voluptas ut.",
+    "sender": {
       "_id": "616471b0a7e9a258d095cce8",
       "username": "beeboop12",
       "email": "beeb@email.com",
@@ -90,7 +100,11 @@ The object of the game is social interaction.
       "__v": 0,
       "createdAt": "2021-10-11T17:17:36.126Z",
       "updatedAt": "2021-10-11T17:17:36.126Z"
-    }
+    },
+    "__v": 0,
+    "createdAt": "2021-10-11T22:11:52.410Z",
+    "updatedAt": "2021-10-11T22:11:52.410Z"
+  }
   ```
 
 ## MVP Goals
@@ -135,8 +149,9 @@ const { model, Schema } = require("mongoose");
 const messageSchema = new Schema(
   {
     title: { type: String, required: true },
-    author: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    recipient: { type: Schema.Types.ObjectId, ref: "User", required: true },
     message: { type: String, require: true },
+    sender: { type: Schema.Types.ObjectId, ref: "User", required: true }
   },
   { timestamps: true }
 );
