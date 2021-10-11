@@ -11,7 +11,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "name": "Cub-Club",
+  "name": "the-cub-club",
   "description": "",
   "version": "1.0.0",
   "main": "server.js",

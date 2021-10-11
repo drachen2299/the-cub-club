@@ -159,20 +159,18 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ## Rachel
 ### Strengths:
-
-
+- Art assets/vision/ux design
 ### Weaknesses:
-
+- Time management (in relation to CSS/Art assets)
 ### Opportunities:
-
+- I want to learn as much as I can about web sockets and game mechanics as possible!
 ### Threats:
-
+- Combining work from three persons without merge issues
 
 
 ## Ben
 ### Strengths:
 - I have a pretty good handle on the backend 
-
 
 ### Weaknesses:
 - Staying on track and not going down rabbit holes 
