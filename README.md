@@ -83,15 +83,18 @@ _Please provide a sample of how you intend to build your models. A Schema object
 
   ```json
   /messages/all
-  {
-    "_id": "61645e4b580a36a1c1d73ad6",
-    "title": "nostrum quia possimus non et illum",
-    "author": null,
-    "message": "Ex id voluptas fugit quia iusto laborum debitis repellendus consequatur. Quas voluptatem facilis. Repellendus itaque recusandae ut aut. Perferendis eaque dolores nesciunt dolor optio. Velit ex ut doloremque rerum voluptatem facilis soluta. Earum dignissimos ut optio consequatur aut qui quo.",
-    "__v": 0,
-    "createdAt": "2021-10-11T15:54:51.075Z",
-    "updatedAt": "2021-10-11T15:54:51.075Z"
-  }
+   {
+    "_id": "616479575c93675128ec084f",
+    "title": "nemo sint assumenda et incidunt earum",
+    "author": {
+      "_id": "616471b0a7e9a258d095cce8",
+      "username": "beeboop12",
+      "email": "beeb@email.com",
+      "bear": "6164709b5c410e950476c741",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:17:36.126Z",
+      "updatedAt": "2021-10-11T17:17:36.126Z"
+    }
   ```
 
 
