@@ -187,7 +187,7 @@ _For each screen you intend on showing, provide a wireframe for both desktop and
 #### Home
 <img src="./mockups/home-drafts.png">
 
-#### In-game
+#### In-game + Mail Modal
 <img src="./mockups/in-game-drafts.png">
 
 #### Forms
