@@ -14,6 +14,6 @@ app.use(logger('dev'));
 app.use("/", api);
 
 app.get("/", (req,res) => {
-    res.status(200).json({message:  "Welcome to root route!"});
+    res.status(200).json({letter:  "Welcome to root route!"});
 })
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}!`));
