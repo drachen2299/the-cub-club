@@ -5,7 +5,7 @@ const findBears = async (req, res) => {
         const bears = await Bear.find();
         res.status(200).json(bears);
     } catch (error) {
-        res.status(500).json({error: error.message});
+        res.status(500).json({error: error.letter});
     }
 }
 
