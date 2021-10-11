@@ -35,6 +35,67 @@ The object of the game is social interaction.
 _Please provide a sample of how you intend to build your models. A Schema object for each of your models is ideal._
 
 ```json
+/users/all
+{
+    "_id": "616471b0a7e9a258d095cce8",
+    "username": "beeboop12",
+    "email": "beeb@email.com",
+    "bear": {
+      "_id": "6164709b5c410e950476c741",
+      "color": "panda",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:12:59.845Z",
+      "updatedAt": "2021-10-11T17:12:59.845Z"
+    }
+```
+```json
+/bears/all
+
+{
+    "_id": "6164709b5c410e950476c73e",
+    "color": "black",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c73f",
+    "color": "brown",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c740",
+    "color": "white",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c741",
+    "color": "panda",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  }
+  ```
+
+  ```json
+  /messages/all
+  {
+    "_id": "61645e4b580a36a1c1d73ad6",
+    "title": "nostrum quia possimus non et illum",
+    "author": null,
+    "message": "Ex id voluptas fugit quia iusto laborum debitis repellendus consequatur. Quas voluptatem facilis. Repellendus itaque recusandae ut aut. Perferendis eaque dolores nesciunt dolor optio. Velit ex ut doloremque rerum voluptatem facilis soluta. Earum dignissimos ut optio consequatur aut qui quo.",
+    "__v": 0,
+    "createdAt": "2021-10-11T15:54:51.075Z",
+    "updatedAt": "2021-10-11T15:54:51.075Z"
+  }
+  ```
+
+
+
 
 ```
 
@@ -76,11 +137,16 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ## Ben
 ### Strengths:
+- I have a pretty good handle on the backend 
 
 ### Weaknesses:
+- Staying on track and not going down rabbit holes 
 
 ### Opportunities:
+- Managing tasks will help me code in a team environment better
 
 ### Threats:
+- Keeping the README and kanban board up to date
+- Managing my OWN time
 
 ### Citations
