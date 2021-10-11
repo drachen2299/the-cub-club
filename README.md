@@ -99,6 +99,7 @@ module.exports = model("User", userSchema);
 ```
 
 
+### API Calls
 ```json
 /users/all
 {
