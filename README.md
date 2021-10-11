@@ -126,7 +126,7 @@ _For each screen you intend on showing, provide a wireframe for both desktop and
 <img src="./mockups/in-game-drafts.png">
 
 #### App Hierarchy
-<img src="./mockups/whimsical-flow-chart.jpg">
+<img src="./mockups/whimsical-flow-chart.png">
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
 
