@@ -4,8 +4,9 @@ const { model, Schema } = require("mongoose");
 const messageSchema = new Schema(
   {
     title: { type: String, required: true },
-    author: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    recipient: { type: Schema.Types.ObjectId, ref: "User", required: true },
     message: { type: String, require: true },
+    sender: { type: Schema.Types.ObjectId, ref: "User", required: true }
   },
   { timestamps: true }
 );
