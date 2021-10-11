@@ -184,11 +184,39 @@ _For each screen you intend on showing, provide a wireframe for both desktop and
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| component                   | Priority | Estiamted Time | Time Invested | Actual Time |
+| --------------------------- | -------- | -------------- | ------------- | ----------- |
+| Backend basics              | H        | 3              | 3             | 3           |
+| Wireframes                  | H        | 3              | 3             | 3           |
+| Visual Dev                  | H        | 3              | 3             | 3           |
+| Flowchart                   | H        | 3              | 3             | 3           |
+| Expectations                | H        | 1              | 1             | 1           |
+| Readme                      | H        | 3              | 3             | 3           |
+| CSS                         | M        | 9              |               |             |
+| Mongo                       | H        | 3              |               |             |
+| Walk Animations             | L        | 9              |               |             |
+| User Auth                   | H        | 5              |               |             |
+| Research                    | H        | 9              | 9             | 9           |
+| Style Homepage              | H        | 3              |               |             |
+| Art Assets                  | H        | 3              |               |             |
+| Frame and Enviroment Assets | H        | 3              |               |             |
+| Component: Nav              | H        | 3              |               |             |
+| Component: Singup           | H        | 3              |               |             |
+| Component: Login            | H        | 3              |               |             |
+| Component: Avatar           | H        | 3              |               |             |
+| Screen: Home                | M        | 2              |               |             |
+| Screen: Avatar Creation     | M        | 3              |               |             |
+| Screen: In-Game             | M        | 3              |               |             |
+| Screen: Sign up             | M        | 2              |               |             |
+| Screen: Login               | M        | 2              |               |             |
+| Mongo: DB                   | H        | 2              |               |             |
+| Mongoose: Models            | H        | 2              |               |             |
+| Mongoose: Seeds             | H        | 2              |               |             |
+| Express: Routes             | H        | 9              |               |             |
+| Express: Controllers        | H        | 9              |               |             |
+| Express: Server             | H        | 9              |               |             |
+| React: Services/Axios calls | H        | 3              |               |             |
+|                             |          | 120            | 25            | 25          |
 
 
 
