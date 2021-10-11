@@ -45,6 +45,61 @@ The object of the game is social interaction.
 ## Database Schemas
 _Please provide a sample of how you intend to build your models. A Schema object for each of your models is ideal._
 
+```
+bearSchema
+const { model, Schema } = require("mongoose");
+
+
+// Create a bear
+
+const bearSchema = new Schema(
+    {
+        
+        color: {type: String, required: true},
+
+    },
+    {timestamps: true}
+)
+
+module.exports = model("Bear", bearSchema);
+```
+```
+messageSchema 
+const { model, Schema } = require("mongoose");
+
+// Messages
+const messageSchema = new Schema(
+  {
+    title: { type: String, required: true },
+    author: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    message: { type: String, require: true },
+  },
+  { timestamps: true }
+);
+
+module.exports = model("Message", messageSchema);
+
+```
+```
+userSchema
+const { model, Schema } = require("mongoose");
+
+
+// User
+const userSchema = new Schema({
+    username: { type: String, required: true, unique: true},
+    email: { type: String, required: true},
+    //password Auth
+    bear: { type: Schema.Types.ObjectId, ref: "Bear", required: true  }
+},
+{timestamps: true});
+
+
+module.exports = model("User", userSchema);
+```
+
+
+### API Calls
 ```json
 /users/all
 {
