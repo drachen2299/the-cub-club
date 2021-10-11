@@ -125,11 +125,7 @@ _For each screen you intend on showing, provide a wireframe for both desktop and
 #### In-game
 <img src="./mockups/in-game-drafts.png">
 
-## MVP
-- 
 
-
-## PostMVP
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
 
@@ -151,11 +147,6 @@ _Use the table below to create your team's timeframes. Given the project is abou
 ### Opportunities:
 
 ### Threats:
-
-
-| Component                     | Priority | Estimated Time | Time Invested | Actual Time |
-| ----------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Total                         |          |     42hrs      |          |       |
 
 ## Rachel
 ### Strengths:
