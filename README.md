@@ -125,6 +125,8 @@ _For each screen you intend on showing, provide a wireframe for both desktop and
 #### In-game
 <img src="./mockups/in-game-drafts.png">
 
+#### Forms
+<img src="./mockups/proposal-drafts-forms.png">
 ## MVP
 - 
 
