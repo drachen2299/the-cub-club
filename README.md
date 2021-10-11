@@ -141,12 +141,16 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ## Nate
 ### Strengths:
+- I think I am good at knowing what needs to do done overall for a feature to work and then splitting it up into smaller steps 
 
 ### Weaknesses:
+- Overthinking and trying to implement a more complicated version in one go rather than first implement a solid basic version.
 
 ### Opportunities:
+- Managing tasks will help me code in a team environment better
 
 ### Threats:
+- Regularly committing, updating trello
 
 ## Rachel
 ### Strengths:
