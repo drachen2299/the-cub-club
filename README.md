@@ -11,12 +11,23 @@
 ## Project Name and Description
 ### Project Name
 The Cub Club
+
+
+## Project Description
+
+The Cub CLub is a Social MMO/Virtual World where players can interact, message and play with eachother as custom bear avatars. 
+
 ### Project Description
 The Cub CLub is a Social MMO/Virtual World where players can interact, message and play with each other as a custom 8bit bear.
 
+
 The object of the game is social interaction.
 
-"I as a User would like to talk to other people around the world as an 8bit Bear".
+"I as a User would like to talk to other people around the world as a cute Bear".
+
+
+
+## API and Data Sample
 
 ## MVP Goals
 - User AUTH
@@ -100,7 +111,6 @@ _Please provide a sample of how you intend to build your models. A Schema object
 
 
 
-```
 
 ## Whimsical
 _Please post your application's full stack diagram here as an IMAGE, not as a link._
@@ -108,6 +118,18 @@ _Please post your application's full stack diagram here as an IMAGE, not as a li
 ## Wireframes
 _For each screen you intend on showing, provide a wireframe for both desktop and mobile._
 
+
+#### Home
+<img src="./mockups/home-drafts.png">
+
+#### In-game
+<img src="./mockups/in-game-drafts.png">
+
+## MVP
+- 
+
+
+## PostMVP
 ## Timeframes
 _Use the table below to create your team's timeframes. Given the project is about a week long, you can add between 40 hours * group members (i.e. 120 hours for 3 group members)._
 
@@ -116,6 +138,7 @@ _Use the table below to create your team's timeframes. Given the project is abou
 | Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
+
 
 
 ## SWOT Analysis
@@ -129,8 +152,14 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ### Threats:
 
+
+| Component                     | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Total                         |          |     42hrs      |          |       |
+
 ## Rachel
 ### Strengths:
+
 
 ### Weaknesses:
 
@@ -138,9 +167,12 @@ _Use the table below to create your team's timeframes. Given the project is abou
 
 ### Threats:
 
+
+
 ## Ben
 ### Strengths:
 - I have a pretty good handle on the backend 
+
 
 ### Weaknesses:
 - Staying on track and not going down rabbit holes 
