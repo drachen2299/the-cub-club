@@ -12,16 +12,12 @@ The Cub Club
 
 ## Project Description
 
-The Cub CLub is a Social MMO/Virtual World where players can interact, message and play with eachother as custom 8bit bears. 
+The Cub CLub is a Social MMO/Virtual World where players can interact, message and play with eachother as custom bear avatars. 
 
 The object of the game is social interaction.
 
-"I as a User would like to talk to other people around the world as an 8bit Bear".
+"I as a User would like to talk to other people around the world as a cute Bear".
 
-
-
-have mailbox - clicking mailbox modal appears that allows you to select the user and send them a message -- 3 messages per user max with a delete 
-option.
 
 ## API and Data Sample
 
@@ -34,12 +30,17 @@ option.
 
 ## Wireframes
 
+#### Home
+<img src="./mockups/home-drafts.png">
 
-#### MVP
+#### In-game
+<img src="./mockups/in-game-drafts.png">
+
+## MVP
 - 
 
 
-#### PostMVP
+## PostMVP
 
 
 
@@ -56,12 +57,11 @@ option.
 
 | Component                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Total                         |          |     42hrs      |     42hrs     |    42hrs    |
+| Total                         |          |     42hrs      |          |       |
 
 ## SWOT Analysis
 
 ### Strengths:
-
 
 
 ### Weaknesses:
