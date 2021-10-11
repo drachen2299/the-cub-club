@@ -78,7 +78,7 @@ The object of the game is social interaction.
   ```
 
   ```json
-  /messages/all
+  /letters/all
    {
     "_id": "6164b6a8bb8f0281c42f1c42",
     "title": "esse tenetur voluptate dolores est et",
@@ -91,7 +91,7 @@ The object of the game is social interaction.
       "createdAt": "2021-10-11T17:17:36.127Z",
       "updatedAt": "2021-10-11T17:17:36.127Z"
     },
-    "message": "Fuga atque corporis labore. At cum maiores et. Quia qui explicabo nam aut dolor magnam libero. Voluptatum sit et quibusdam qui est velit ipsa numquam laborum. Consequuntur nesciunt non et ad consectetur minima. Dolor maxime voluptas ut.",
+    "letter": "Fuga atque corporis labore. At cum maiores et. Quia qui explicabo nam aut dolor magnam libero. Voluptatum sit et quibusdam qui est velit ipsa numquam laborum. Consequuntur nesciunt non et ad consectetur minima. Dolor maxime voluptas ut.",
     "sender": {
       "_id": "616471b0a7e9a258d095cce8",
       "username": "beeboop12",
@@ -111,7 +111,7 @@ The object of the game is social interaction.
 - User AUTH
 - User can login and make a bear avatar
 - User can load into game room
-- User can interact with mailbox to send messages to other players
+- User can interact with mailbox to send letter to other players
 
 ## Post-MVP Goals
 - Websockets
@@ -142,21 +142,21 @@ const bearSchema = new Schema(
 module.exports = model("Bear", bearSchema);
 ```
 ```
-messageSchema 
+letterSchema 
 const { model, Schema } = require("mongoose");
 
-// Messages
-const messageSchema = new Schema(
+// letters
+const letterSchema = new Schema(
   {
     title: { type: String, required: true },
     recipient: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    message: { type: String, require: true },
+    letter: { type: String, require: true },
     sender: { type: Schema.Types.ObjectId, ref: "User", required: true }
   },
   { timestamps: true }
 );
 
-module.exports = model("Message", messageSchema);
+module.exports = model("letter", letterSchema);
 
 ```
 ```
