@@ -28,6 +28,68 @@ The object of the game is social interaction.
 
 
 ## API and Data Sample
+```json
+/users/all
+{
+    "_id": "616471b0a7e9a258d095cce8",
+    "username": "beeboop12",
+    "email": "beeb@email.com",
+    "bear": {
+      "_id": "6164709b5c410e950476c741",
+      "color": "panda",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:12:59.845Z",
+      "updatedAt": "2021-10-11T17:12:59.845Z"
+    }
+```
+```json
+/bears/all
+
+{
+    "_id": "6164709b5c410e950476c73e",
+    "color": "black",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c73f",
+    "color": "brown",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.844Z",
+    "updatedAt": "2021-10-11T17:12:59.844Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c740",
+    "color": "white",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  },
+  {
+    "_id": "6164709b5c410e950476c741",
+    "color": "panda",
+    "__v": 0,
+    "createdAt": "2021-10-11T17:12:59.845Z",
+    "updatedAt": "2021-10-11T17:12:59.845Z"
+  }
+  ```
+
+  ```json
+  /messages/all
+   {
+    "_id": "616479575c93675128ec084f",
+    "title": "nemo sint assumenda et incidunt earum",
+    "author": {
+      "_id": "616471b0a7e9a258d095cce8",
+      "username": "beeboop12",
+      "email": "beeb@email.com",
+      "bear": "6164709b5c410e950476c741",
+      "__v": 0,
+      "createdAt": "2021-10-11T17:17:36.126Z",
+      "updatedAt": "2021-10-11T17:17:36.126Z"
+    }
+  ```
 
 ## MVP Goals
 - User AUTH
@@ -97,75 +159,6 @@ const userSchema = new Schema({
 
 module.exports = model("User", userSchema);
 ```
-
-
-### API Calls
-```json
-/users/all
-{
-    "_id": "616471b0a7e9a258d095cce8",
-    "username": "beeboop12",
-    "email": "beeb@email.com",
-    "bear": {
-      "_id": "6164709b5c410e950476c741",
-      "color": "panda",
-      "__v": 0,
-      "createdAt": "2021-10-11T17:12:59.845Z",
-      "updatedAt": "2021-10-11T17:12:59.845Z"
-    }
-```
-```json
-/bears/all
-
-{
-    "_id": "6164709b5c410e950476c73e",
-    "color": "black",
-    "__v": 0,
-    "createdAt": "2021-10-11T17:12:59.844Z",
-    "updatedAt": "2021-10-11T17:12:59.844Z"
-  },
-  {
-    "_id": "6164709b5c410e950476c73f",
-    "color": "brown",
-    "__v": 0,
-    "createdAt": "2021-10-11T17:12:59.844Z",
-    "updatedAt": "2021-10-11T17:12:59.844Z"
-  },
-  {
-    "_id": "6164709b5c410e950476c740",
-    "color": "white",
-    "__v": 0,
-    "createdAt": "2021-10-11T17:12:59.845Z",
-    "updatedAt": "2021-10-11T17:12:59.845Z"
-  },
-  {
-    "_id": "6164709b5c410e950476c741",
-    "color": "panda",
-    "__v": 0,
-    "createdAt": "2021-10-11T17:12:59.845Z",
-    "updatedAt": "2021-10-11T17:12:59.845Z"
-  }
-  ```
-
-  ```json
-  /messages/all
-   {
-    "_id": "616479575c93675128ec084f",
-    "title": "nemo sint assumenda et incidunt earum",
-    "author": {
-      "_id": "616471b0a7e9a258d095cce8",
-      "username": "beeboop12",
-      "email": "beeb@email.com",
-      "bear": "6164709b5c410e950476c741",
-      "__v": 0,
-      "createdAt": "2021-10-11T17:17:36.126Z",
-      "updatedAt": "2021-10-11T17:17:36.126Z"
-    }
-  ```
-
-
-
-
 
 ## Whimsical
 _Please post your application's full stack diagram here as an IMAGE, not as a link._
