@@ -1,12 +1,13 @@
 import { useState } from "react";
-
+import { useParams } from "react-router";
 import { createBear } from "../../services";
 
-const Avatar = (props) => {
-  const id = props._id
+const Avatar = () => {
   const [fur, setFur] = useState("brown");
   // const [accessory, setAccessory] = useState(null);
   // const [color, setColor] = useState(null);
+
+  const params = useParams();
 
   const bearSubmit = async (e) => {
     try {
@@ -16,9 +17,9 @@ const Avatar = (props) => {
       // accessory,
       // color
     };
-    const bear = await createBear(id, newBear);
+    const bear = await createBear(params.id, newBear);
     // push user to game room
-    
+
   } catch (e) {
     console.error(e.message)
   }

@@ -1,6 +1,5 @@
 import {Switch, Route} from "react-router-dom";
 import { useState, useEffect } from "react";
-import Nav from './components/Nav';
 import Home from './screens/Home';
 import CreateAvatar from './screens/CreateAvatar';
 import Signup from './screens/Signup';
@@ -12,6 +11,7 @@ import './App.css';
 function App() {
   
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     verifyUser().then((verifiedUser) => setUser(verifiedUser))
   }, []);
@@ -24,8 +24,8 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/create-avatar">
-            <CreateAvatar user={user}/>
+          <Route exact path="/create-avatar/:id">
+            <CreateAvatar />
           </Route>
           <Route exact path="/sign-up">
             <Signup setUser={setUser}/>

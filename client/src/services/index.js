@@ -39,16 +39,6 @@ export const registerUser = async (userInfo) => {
   }
 };
 
-export const loginUser = async (userInfo) => {
-  try {
-    const response = await axios.post(`${apiURL}/users/login`, userInfo);
-    localStorage.setItem("token", response.data.token)
-    return response.data.user;
-  } catch (error) {
-    console.error(error.message)
-  }
-};
-
 const buildHeaders = (token) => {
   return {
     headers: {
@@ -70,6 +60,16 @@ export const verifyUser = async () => {
     console.error(error.message);
   }
 };
+export const loginUser = async (userInfo) => {
+  try {
+    const response = await axios.post(`${apiURL}/users/login`, userInfo);
+    localStorage.setItem("token", response.data.token)
+    return response.data.user;
+  } catch (error) {
+    console.error(error.message)
+  }
+};
+
 
 export const sendLetter = async (data) => {
   try {
