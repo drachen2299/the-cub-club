@@ -5,7 +5,7 @@ const { restrict } = require("../utils");
 const userRouter = new Router();
 
 userRouter.get("/all", userController.findAllUsers);
-userRouter.post("login", userController.login);
+userRouter.post("/login", userController.login);
 userRouter.post("/register", userController.registration);
-userRouter.get("/authenticate", userController.authenticate);
+userRouter.get("/authenticate", restrict, userController.authenticate);
 module.exports = userRouter;
