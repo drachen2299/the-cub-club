@@ -19,7 +19,6 @@ const sendLetter = async (req, res) => {
     const [user] = await User.find({ username: req.body.username });
     const userInfo = createUserInfo(res.locals.user);
     const newLetter = {
-      title: req.body.title,
       recipient: user._id,
       letter: req.body.letter,
       sender: userInfo._id,
