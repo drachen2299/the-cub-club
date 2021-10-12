@@ -3,7 +3,6 @@ import {getUsers, sendLetter} from '../../services';
 import './index.css';
 
 const Modal = (props) => {
-  const [title, setTitle] = useState('');
   const [username, setUsername] = useState('beeboop12')
   const [recipient, setRecipient] = useState({});
   const [letter, setLetter] = useState('');
@@ -14,7 +13,6 @@ const Modal = (props) => {
       e.preventDefault();
       const letterInfo = {
         username,
-        title,
         letter,
       }
       sendLetter(letterInfo);
@@ -52,10 +50,6 @@ const Modal = (props) => {
                 <h3>{recipient?.username}</h3>
               </div>
               <form className="MessageForm" onSubmit={handleSubmit}>
-              <label className="Header" htmlFor="title">
-                  <h2>Title:</h2>
-                </label>
-                <input id="title" type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
                 <label className="Header" htmlFor="message">
                   <h2>Message:</h2>
                 </label>
