@@ -1,6 +1,5 @@
 import {Switch, Route} from "react-router-dom";
 import { useState, useEffect } from "react";
-import Nav from './components/Nav';
 import Home from './screens/Home';
 import CreateAvatar from './screens/CreateAvatar';
 import Signup from './screens/Signup';
@@ -12,6 +11,7 @@ import './App.css';
 function App() {
   
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     verifyUser().then((verifiedUser) => setUser(verifiedUser))
   }, []);
@@ -19,14 +19,13 @@ function App() {
 
   return (
     <div className="App">
-      <Nav user={user}/>
       <Switch>
         <main>
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/create-avatar">
-            <CreateAvatar/>
+          <Route exact path="/create-avatar/:id">
+            <CreateAvatar user={user}/>
           </Route>
           <Route exact path="/sign-up">
             <Signup setUser={setUser}/>
@@ -35,7 +34,7 @@ function App() {
             <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
-            <Game/>
+            <Game user={user}/>
           </Route>
         </main>
       </Switch>

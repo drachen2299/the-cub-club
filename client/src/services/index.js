@@ -13,7 +13,7 @@ export const defaultRoute = async () => {
 
 export const createBear = async (userId, newBear) => {
   try {
-    const response = await axios.post(`${apiURL}/user/new-bear/${userId}`, newBear);
+    const response = await axios.post(`${apiURL}/users/new-bear/${userId}`, newBear);
     return response.data;
   } catch (e) {
     console.error(e.message);
@@ -39,23 +39,13 @@ export const registerUser = async (userInfo) => {
   }
 };
 
-export const loginUser = async (userInfo) => {
-  try {
-    const response = await axios.post(`${apiURL}/users/login`, userInfo);
-    localStorage.setItem("token", response.data.token)
-    return response.data.user;
-  } catch (error) {
-    console.error(error.message)
-  }
-};
-
 const buildHeaders = (token) => {
   return {
     headers: {
       Authorization: `Bearer ${token}`
     }
   }
-}
+};
 
 export const verifyUser = async () => {
   try {
@@ -70,6 +60,16 @@ export const verifyUser = async () => {
     console.error(error.message);
   }
 };
+export const loginUser = async (userInfo) => {
+  try {
+    const response = await axios.post(`${apiURL}/users/login`, userInfo);
+    localStorage.setItem("token", response.data.token)
+    return response.data.user;
+  } catch (error) {
+    console.error(error.message)
+  }
+};
+
 
 export const sendLetter = async (data) => {
   try {
