@@ -1,8 +1,13 @@
+import Avatar from "../../components/Avatar";
+import Nav from "../../components/Nav";
+
 const CreateAvatar = () => {
   return (
-    <div>
-      This is where you will create your Avatar
-    </div>
+    <section>
+      <Nav />
+      <h3>Create your bear!</h3>
+      <Avatar />
+    </section>
   );
 };
 

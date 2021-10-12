@@ -10,3 +10,11 @@ export const defaultRoute = async () => {
     console.error(e.message);
   }
 }
+
+export const createBear = async () => {
+  try {
+    
+  } catch (e) {
+    console.error(e.message);
+  }
+}
