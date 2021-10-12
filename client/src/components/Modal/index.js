@@ -1,15 +1,26 @@
 import {useState, useEffect} from "react";
-import {getUsers} from '../../services';
+import {getUsers, sendLetter} from '../../services';
 import './index.css';
 
 const Modal = (props) => {
-  const [message, setMessage] = useState('');
-  const [users, setUsers] = useState([]);
+  const [title, setTitle] = useState('');
+  const [username, setUsername] = useState('beeboop12')
   const [recipient, setRecipient] = useState({});
+  const [letter, setLetter] = useState('');
+  const [users, setUsers] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("submitted!");
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const letterInfo = {
+        username,
+        title,
+        letter,
+      }
+      sendLetter(letterInfo);
+    } catch (e) {
+      console.error(e.message);
+    }
   }
 
   useEffect(() => {
@@ -41,10 +52,14 @@ const Modal = (props) => {
                 <h3>{recipient?.username}</h3>
               </div>
               <form className="MessageForm" onSubmit={handleSubmit}>
+              <label className="Header" htmlFor="title">
+                  <h2>Title:</h2>
+                </label>
+                <input id="title" type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
                 <label className="Header" htmlFor="message">
                   <h2>Message:</h2>
                 </label>
-                <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <input id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
                 <button type="submit">Send!</button>
               </form>
             </div>
