@@ -45,7 +45,7 @@ const buildHeaders = (token) => {
       Authorization: `Bearer ${token}`
     }
   }
-}
+};
 
 export const verifyUser = async () => {
   try {

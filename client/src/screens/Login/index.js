@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router";
 import { loginUser } from "../../services";
 
 const Login = (props) => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     try {
@@ -15,6 +17,7 @@ const Login = (props) => {
       };
       const user = await loginUser(userInfo);
       props.setUser(user);
+      history.push('/')
     } catch (e) {
       console.error(e.message)
     }

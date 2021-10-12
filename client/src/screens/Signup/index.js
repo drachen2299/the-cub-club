@@ -20,7 +20,7 @@ const Signup = (props) => {
       };
       const user = await registerUser(userInfo);
       props.setUser(user);
-      history.push(`/create-avatar/${user._id}`)
+      history.push(`/`)
     } catch (e) {
       console.error(e.message);
     }

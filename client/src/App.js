@@ -25,7 +25,7 @@ function App() {
             <Home/>
           </Route>
           <Route exact path="/create-avatar/:id">
-            <CreateAvatar />
+            <CreateAvatar user={user}/>
           </Route>
           <Route exact path="/sign-up">
             <Signup setUser={setUser}/>
@@ -34,7 +34,7 @@ function App() {
             <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
-            <Game/>
+            <Game user={user}/>
           </Route>
         </main>
       </Switch>
