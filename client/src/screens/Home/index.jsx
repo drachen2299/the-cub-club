@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <section>
-            
+      This is home
     </section>
   );
 };
