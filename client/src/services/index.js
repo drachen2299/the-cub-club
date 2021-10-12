@@ -11,10 +11,10 @@ export const defaultRoute = async () => {
   }
 }
 
-
-export const createBear = async () => {
+export const createBear = async (userId, newBear) => {
   try {
-    const response = await axios.post(apiURL)
+    const response = await axios.post(`${apiURL}/user/new-bear/${userId}`, newBear);
+    return response.data;
   } catch (e) {
     console.error(e.message);
   }
@@ -28,6 +28,48 @@ export const getUsers = async () => {
     console.error(e.message);
   }
 }
+
+export const registerUser = async (userInfo) => {
+  try {
+    const response = await axios.post(`${apiURL}/users/register`, userInfo);
+    localStorage.setItem("token", response.data.token)
+    return response.data.user;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+export const loginUser = async (userInfo) => {
+  try {
+    const response = await axios.post(`${apiURL}/users/login`, userInfo);
+    localStorage.setItem("token", response.data.token)
+    return response.data.user;
+  } catch (error) {
+    console.error(error.message)
+  }
+};
+
+const buildHeaders = (token) => {
+  return {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+}
+
+export const verifyUser = async () => {
+  try {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const config = buildHeaders(token);
+      const response = await axios.get(`${apiURL}/users/authenticate`, config);
+      return response.data.user;    
+    }
+    return null;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 
 export const sendLetter = async (data) => {
   try {

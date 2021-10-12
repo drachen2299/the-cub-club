@@ -1,29 +1,35 @@
 import { useState } from "react";
+import { createBear } from "../../services";
 
-const Avatar = () => {
+const Avatar = (props) => {
 
-  const [fur, setFur] = useState(0);
+  const [fur, setFur] = useState("brown");
   // const [accessory, setAccessory] = useState(null);
   // const [color, setColor] = useState(null);
 
-  const bearSubmit = (e) => {
+  const bearSubmit = async (e) => {
+    try {
     e.preventDefault();
     const newBear = {
       fur,
       // accessory,
       // color
-    }
+    };
+    const bear = await createBear(props.id, newBear);
+  } catch (e) {
+    console.error(e.message)
+  }
     
   }
 
   return (
     <form onSubmit={bearSubmit}>
       <label htmlFor="fur">Fur:</label>
-      <select id="fur" onChange={(e) => setFur(e.target.valueAsNumber)}>
-        <option value={0}>Brown Bear</option>
-        <option value={1}>Black Bear</option>
-        <option value={2}>Polar Bear</option>
-        <option value={3}>Panda Bear</option>
+      <select id="fur" onChange={(e) => setFur(e.target.value)}>
+        <option value={"brown"}>Brown Bear</option>
+        <option value={"black"}>Black Bear</option>
+        <option value={"white"}>Polar Bear</option>
+        <option value={"panda"}>Panda Bear</option>
       </select>
       {/* <label htmlFor="accessory">Accessory:</label>
       <select id="accessory">
