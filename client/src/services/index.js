@@ -28,3 +28,11 @@ export const getUsers = async () => {
     console.error(e.message);
   }
 }
+
+export const sendLetter = async (data) => {
+  try {
+    await axios.post(`${apiURL}/letters/new-letter`, data);
+  } catch (e) {
+    console.error(e.message);
+  }
+}
