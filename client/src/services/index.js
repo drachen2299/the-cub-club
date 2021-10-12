@@ -13,7 +13,7 @@ export const defaultRoute = async () => {
 
 export const createBear = async () => {
   try {
-    
+    const response = await axios.post(apiURL)
   } catch (e) {
     console.error(e.message);
   }
