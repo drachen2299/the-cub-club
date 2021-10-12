@@ -19,14 +19,13 @@ function App() {
 
   return (
     <div className="App">
-      <Nav user={user}/>
       <Switch>
         <main>
           <Route exact path="/">
             <Home/>
           </Route>
           <Route exact path="/create-avatar">
-            <CreateAvatar/>
+            <CreateAvatar user={user}/>
           </Route>
           <Route exact path="/sign-up">
             <Signup setUser={setUser}/>

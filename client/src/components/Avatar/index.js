@@ -1,8 +1,9 @@
 import { useState } from "react";
+
 import { createBear } from "../../services";
 
 const Avatar = (props) => {
-
+  const id = props._id
   const [fur, setFur] = useState("brown");
   // const [accessory, setAccessory] = useState(null);
   // const [color, setColor] = useState(null);
@@ -15,7 +16,9 @@ const Avatar = (props) => {
       // accessory,
       // color
     };
-    const bear = await createBear(props.id, newBear);
+    const bear = await createBear(id, newBear);
+    // push user to game room
+    
   } catch (e) {
     console.error(e.message)
   }

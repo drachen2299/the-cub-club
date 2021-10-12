@@ -1,12 +1,13 @@
 import Avatar from "../../components/Avatar";
 import Nav from "../../components/Nav";
 
-const CreateAvatar = () => {
+const CreateAvatar = (props) => {
+  const { username, _id } = props.user
   return (
     <section>
-      <Nav />
+      <Nav username={username}/>
       <h3>Create your bear!</h3>
-      <Avatar />
+      <Avatar _id={_id}/>
     </section>
   );
 };
