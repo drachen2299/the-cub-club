@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/create-avatar:id">
+          <Route exact path="/create-avatar">
             <CreateAvatar/>
           </Route>
           <Route exact path="/sign-up">

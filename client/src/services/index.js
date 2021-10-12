@@ -11,6 +11,15 @@ export const defaultRoute = async () => {
   }
 }
 
+
+export const createBear = async () => {
+  try {
+    const response = await axios.post(apiURL)
+  } catch (e) {
+    console.error(e.message);
+  }
+}
+
 export const getUsers = async () => {
   try {
     const res = await axios.get(`${apiURL}/users/all`);
