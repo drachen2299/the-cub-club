@@ -9,7 +9,6 @@
 }
 
 .grid-board {
-    background: url("../../assets/gameboard-blueprint.svg");
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 80px);
