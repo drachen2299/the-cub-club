@@ -48,6 +48,19 @@ const registration = async (req, res) => {
   }
 };
 
+const userBear = async (req, res) => {
+  const id = req.params;
+  try {
+    const bear = {
+      fur: req.body.fur
+    }
+    const addBearToUser = await User.findByIdAndUpdate({ _id: id }, { bear });
+    return res.status(201).json(addBearToUser)
+  } catch (e) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
 const findAllUsers = async (req, res) => {
   try {
     const users = await User.find();
@@ -62,4 +75,5 @@ module.exports = {
   authenticate,
   registration,
   login,
+  userBear,
 };

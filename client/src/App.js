@@ -15,6 +15,7 @@ function App() {
   const [selectedTile, setSelectedTile] = useState([0, 0]);
   const location = useLocation();
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     verifyUser().then((verifiedUser) => setUser(verifiedUser))
   }, []);
@@ -77,14 +78,13 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Nav user={user}/>
       <Switch>
         <main>
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/create-avatar">
-            <CreateAvatar/>
+          <Route exact path="/create-avatar/:id">
+            <CreateAvatar user={user}/>
           </Route>
           <Route exact path="/sign-up">
             <Signup setUser={setUser}/>
@@ -93,7 +93,7 @@ useEffect(() => {
             <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
-            <Game selectedTile={selectedTile} tiles={tiles}/>
+            <Game selectedTile={selectedTile} tiles={tiles} user={user}/>
           </Route>
         </main>
       </Switch>

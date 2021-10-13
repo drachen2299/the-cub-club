@@ -8,7 +8,7 @@ const userSchema = new Schema({
     //password Auth
     bear:
     {
-        color: { type: String, required: true }
+        fur: { type: String, required: false }
     }
 },
     { timestamps: true });
