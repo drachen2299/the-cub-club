@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { useParams } from "react-router";
+import brownBear from './creation-assets/brown-bear-front.png';
+import blackBear from './creation-assets/black-bear-front.png';
+import whiteBear from './creation-assets/white-bear-front.png';
+import pandaBear from'./creation-assets/panda-bear-front.png';
 import { createBear } from "../../services";
 
 const Avatar = (props) => {
@@ -26,6 +29,7 @@ const Avatar = (props) => {
   }
 
   return (
+    <container>
     <form onSubmit={bearSubmit}>
       <label htmlFor="fur">Fur:</label>
       <select id="fur" onChange={(e) => setFur(e.target.value)}>
@@ -44,6 +48,17 @@ const Avatar = (props) => {
       </select> */}
       <button type="submit">Done!</button>
     </form>
+    <img
+    src={fur === "brown" ? (
+      brownBear
+    ) : fur === "black" ? (
+       blackBear
+    ) : fur === "white" ? (
+       whiteBear
+    ) : (
+       pandaBear
+    )}/>
+    </container>
   );
 };
 
