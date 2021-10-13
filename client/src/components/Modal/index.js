@@ -55,11 +55,11 @@ const Modal = (props) => {
                 <h3>{recipient?.username}</h3>
               </div>
               <form className="MessageForm" onSubmit={handleSubmit}>
-                <label className="Header" htmlFor="message">
-                  <h2>Message:</h2>
+                <label htmlFor="message">
+                  <h2 className="Header">Message:</h2>
                 </label>
                 <input id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
-                <button type="submit">Send!</button>
+                <button className="SubmitButton" type="submit">Send!</button>
               </form>
             </div>
           </div>
