@@ -78,3 +78,21 @@ export const sendLetter = async (data) => {
     console.error(e.message);
   }
 }
+
+
+
+export const createEmptyBoard = () => {
+  let arr = [];
+  for(let y = 0; y < 4; y++){
+    for(let x = 0; x < 4; x++){
+      arr.push(
+        {
+          x,
+          y,
+          contents: null
+        }
+      )
+    }
+  }
+  return arr;
+}

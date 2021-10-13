@@ -1,0 +1,14 @@
+.selected {
+    background-color: black;
+    border: solid 1px purple;
+    content: "";
+    pointer-events: none;
+
+}
+
+.grid-board {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+}
