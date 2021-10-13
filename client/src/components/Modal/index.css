@@ -8,6 +8,16 @@
   width: 500px;
 }
 
+.ModalTitle {
+  font-family: 'Modak', cursive;
+  font-weight: normal;
+}
+
+.Header {
+  font-family: 'Modak', cursive;
+  font-weight: normal;
+}
+
 .ModalScreenContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
