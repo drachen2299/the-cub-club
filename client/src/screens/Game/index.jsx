@@ -9,13 +9,21 @@ import "./game.css";
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [tiles, setTiles] = useState(createEmptyBoard());
-  const [selectedTile, dispatch] = useKeyPress([0,0]);
+  const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([0,0]);
   useEffect(() => {
     window.addEventListener("keydown", (e) => dispatch({type: e.keyCode}));
     return () => {
       window.removeEventListener("keydown", (e) => dispatch({type: e.keyCode}));
     };
   }, []);
+  useEffect(() => {
+    // if showmodal dispatch stop keyPress else dispath start keyPress
+    if (showModal) {
+      dispatch({type: "stop-keypress"})
+    } else {
+      dispatch({type: "start-keypress"})
+    }
+  }, [showModal])
 
   return (
     <>
@@ -24,10 +32,12 @@ const Game = (props) => {
         <Modal showModal={showModal} user={props.user} />
         <p>This is where you can play the game!</p>
         <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
-        <div className="grid-board">
-          <Tile selectedTile={selectedTile} tiles={tiles} />
+        <div className="game-board">
+          <div className="grid-board">
+            <Tile selectedTile={selectedTile} tiles={tiles} />
+          </div>
+                </div>
         </div>
-      </div>
     </>
   );
 };
