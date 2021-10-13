@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   // tile spaces and selected tiles states
-  const [tiles, setTiles] = useState(createEmptyBoard());
+  const [tiles, setTiles] = useState(createEmptyBoard(1,1));
   const [selectedTile, dispatch] = useKeyPress([0,0]);
   const [user, setUser] = useState(null);
 
