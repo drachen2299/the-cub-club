@@ -4,9 +4,11 @@ import blackBear from './creation-assets/black-bear-front.png';
 import whiteBear from './creation-assets/white-bear-front.png';
 import pandaBear from'./creation-assets/panda-bear-front.png';
 import { createBear } from "../../services";
+import { useHistory } from "react-router";
 
 const Avatar = (props) => {
   const [fur, setFur] = useState("brown");
+  const history = useHistory();
   // const [accessory, setAccessory] = useState(null);
   // const [color, setColor] = useState(null);
   const { id } = props.user;
@@ -21,7 +23,7 @@ const Avatar = (props) => {
     const bear = await createBear(id, newBear);
     console.log(newBear)
     // push user to game room
-
+    history.push("/game");
   } catch (e) {
     console.error(e.message)
   }
