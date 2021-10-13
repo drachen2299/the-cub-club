@@ -59,7 +59,7 @@ const Modal = (props) => {
                   <h2 className="Header">Message:</h2>
                 </label>
                 <input id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
-                <button type="submit">Send!</button>
+                <button className="SubmitButton" type="submit">Send!</button>
               </form>
             </div>
           </div>
