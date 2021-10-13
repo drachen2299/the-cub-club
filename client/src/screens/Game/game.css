@@ -1,6 +1,8 @@
 .selected {
-    background-color: black;
-    border: solid 1px purple;
+    background-image: url('../../assets/brownBear.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 1px black;
     content: "";
     pointer-events: none;
 
