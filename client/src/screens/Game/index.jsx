@@ -8,7 +8,7 @@ import "./game.css";
 
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [tiles, setTiles] = useState(createEmptyBoard());
+  const [tiles, setTiles] = useState(createEmptyBoard(1,1));
   const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([0,0]);
   useEffect(() => {
     window.addEventListener("keydown", (e) => dispatch({type: e.keyCode}));
@@ -34,10 +34,10 @@ const Game = (props) => {
         <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
         <div className="game-board">
           <div className="grid-board">
-            <Tile selectedTile={selectedTile} tiles={tiles} />
+            <Tile setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
           </div>
-                </div>
         </div>
+      </div>
     </>
   );
 };
