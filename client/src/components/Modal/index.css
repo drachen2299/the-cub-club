@@ -1,6 +1,25 @@
+.ClubMembersList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-style:solid;
+  border-width: thin;
+  border-color: #59392A;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+.ClubMembersContainer {
+  
+}
+
 .Modal {
   align-items: center;
-  background: pink;
+  background: #DFDACD;
+  border-style: solid;
+  border-color: #59392A;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -11,11 +30,14 @@
 .ModalTitle {
   font-family: 'Modak', cursive;
   font-weight: normal;
+  color: #E1C16D;
+  text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
 }
 
 .Header {
   font-family: 'Modak', cursive;
   font-weight: normal;
+  color: #59392A;
 }
 
 .ModalScreenContainer {
