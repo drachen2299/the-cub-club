@@ -15,7 +15,7 @@ const Game = (props) => {
         <p>This is where you can play the game!</p>
         <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
         <div className="grid-board">
-          <Tile {...props} />
+            <Tile {...props} />
         </div>
       </div>
     </>
