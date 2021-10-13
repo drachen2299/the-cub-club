@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { registerUser } from "../../services";
-import { useHistory } from "react-router";
 
 const Signup = (props) => {
 
@@ -8,7 +7,6 @@ const Signup = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [confirmPw, setConfirmPw] = useState("");
-  const history = useHistory();
 
   const handleSubmit = async (e) => {
     try {
@@ -20,7 +18,6 @@ const Signup = (props) => {
       };
       const user = await registerUser(userInfo);
       props.setUser(user);
-      history.push(`/`)
     } catch (e) {
       console.error(e.message);
     }
