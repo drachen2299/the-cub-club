@@ -68,7 +68,7 @@ function App() {
 
   
 //   setTiles(newTiles);
-// }, [selectedTile, tiles]);
+// }, [selectedTile]);
 
   return (
     <div className="App">
