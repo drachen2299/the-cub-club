@@ -1,7 +1,7 @@
-const Home = () => {
+const Home = (props) => {
   return (
     <section>
-      This is home
+      {props.user?.username}
     </section>
   );
 };

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "npm run start",
-    "dev": "npm run dev"
+    "dev": "nodemon index.js"
   },
   "name": "the-cub-club",
   "description": "",

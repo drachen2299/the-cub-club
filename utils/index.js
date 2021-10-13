@@ -10,6 +10,9 @@ const createUserInfo = (user) => {
   return {
     username: user.username,
     email: user.email,
+    bear: {
+      fur: "panda",
+    },
     id: user._id,
   }
 }
@@ -24,7 +27,7 @@ const restrict = async (req, res, next) => {
   try {
     // if there's no Authorization header
     if (!req.headers.authorization) {
-      throw new Error();
+      throw new Error("Failed to provide token");
     }
     // remove the Bearer from token
     const token = req.headers.authorization.split(" ")[1];

@@ -10,6 +10,7 @@ const {
 const login = async (req, res) => {
   try {
     const [user] = await User.find({ username: req.body.username });
+    console.log(req.body.password);
     if (comparePasswords(req.body.password, user.password)) {
       const userInfo = createUserInfo({ user });
       const token = createToken(userInfo);
