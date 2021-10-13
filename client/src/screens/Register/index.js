@@ -4,7 +4,7 @@ import Nav from "../../components/Nav";
 
 const Register = (props) => {
 
-
+  const { id, username } = props.user;
 
   return (
   <>
@@ -13,9 +13,9 @@ const Register = (props) => {
     </section>
     {/* conditionally render bear creation */}
     <section>
-      <Nav user={props.user}/>
+      <Nav username={username}/>
       <h3>Create your bear!</h3>
-      <Avatar user={props.user}/>
+      <Avatar id={id}/>
     </section>
   </>
   );
