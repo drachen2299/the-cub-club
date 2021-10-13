@@ -17,7 +17,7 @@ const Login = (props) => {
       };
       const user = await loginUser(userInfo);
       props.setUser(user);
-      history.push('/')
+      history.push('/game')
     } catch (e) {
       console.error(e.message)
     }

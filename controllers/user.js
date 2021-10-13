@@ -7,6 +7,15 @@ const {
   hashPassword,
 } = require("../utils");
 
+const authenticate = async (req, res) => {
+  try {
+    const userInfo = createUserInfo(res.locals.user);
+    return res.status(200).json({ user: userInfo });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 const login = async (req, res) => {
   try {
     const [user] = await User.find({ username: req.body.username });
@@ -23,14 +32,6 @@ const login = async (req, res) => {
   }
 };
 
-const authenticate = async (req, res) => {
-  try {
-    const userInfo = createUserInfo(res.locals.user);
-    return res.status(200).json({ user: userInfo });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
 
 const registration = async (req, res) => {
   try {
@@ -42,7 +43,6 @@ const registration = async (req, res) => {
     const user = await User.create(newUser);
     const userInfo = createUserInfo(user);
     const token = createToken(userInfo);
-
     return res.status(201).json({ user: userInfo, token });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -50,15 +50,12 @@ const registration = async (req, res) => {
 };
 
 const userBear = async (req, res) => {
-  const id = req.params;
   try {
-    const bear = {
-      fur: req.body.fur
-    }
-    const addBearToUser = await User.findByIdAndUpdate({ _id: id }, { bear });
+    const addBearToUser = await User.findByIdAndUpdate(req.params.id, { bear: req.body });
     return res.status(201).json(addBearToUser)
-  } catch (e) {
+  } catch (error) {
     res.status(500).json({ message: error.message });
+    console.log(req.params.id, { bear: req.body })
   }
 }
 

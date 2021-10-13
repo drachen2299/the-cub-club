@@ -9,7 +9,7 @@ const createUser = async () => {
         email: "beeb@email.com",
         password: hashPassword("testpassword"),
         bear: {
-            color: "panda"
+
         }
     },
     {
@@ -17,7 +17,7 @@ const createUser = async () => {
         email: "derp31@email.com",
         password: hashPassword("testpassword"),
         bear: {
-            color: "panda"
+
         }
     },
     {
@@ -25,11 +25,11 @@ const createUser = async () => {
         email: "heer543@email.com",
         password: hashPassword("testpassword"),
         bear: {
-            color: "panda"
+
         }
     }
 ]
-
+await User.deleteMany();
 await User.insertMany(newUser)
 };
 
