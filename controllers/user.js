@@ -20,7 +20,7 @@ const login = async (req, res) => {
   try {
     const [user] = await User.find({ username: req.body.username });
     if (comparePasswords(req.body.password, user.password)) {
-      const userInfo = createUserInfo({ user });
+      const userInfo = createUserInfo(user);
       const token = createToken(userInfo);
       return res.status(200).json({ user: userInfo, token });
     } else {

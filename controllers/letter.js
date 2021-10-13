@@ -1,6 +1,9 @@
 const User = require("../models/user");
 const Letter = require("../models/letter");
 const faker = require("faker");
+const {
+  createUserInfo
+} = require('../utils');
 
 const findAllLetters = async (req, res) => {
   try {
@@ -16,14 +19,15 @@ const findAllLetters = async (req, res) => {
 
 const sendLetter = async (req, res) => {
   try {
-    const [user] = await User.find({ username: req.body.username });
-    const userInfo = createUserInfo(res.locals.user);
+    const [sender] = await User.find({username: req.body.sender.username})
+    const [recipient] = await User.find({ username: req.body.recipient.username });
     const newLetter = {
-      recipient: user._id,
+      recipient: recipient._id,
       letter: req.body.letter,
-      sender: userInfo._id,
+      sender: sender._id,
     };
-    const letter = await Letter.create(newLetter);
+    const letter = new Letter(newLetter);
+    await letter.save();
     res.status(201).json({message: "Letter sent!"});
   } catch (error) {
     res.status(500).json({ error: error.Letter });
