@@ -9,13 +9,13 @@
     "morgan": "^1.10.0"
   },
   "scripts": {
-    "start": "npm run start",
-    "dev": "npm run dev"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "name": "the-cub-club",
   "description": "",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drachen2299/Cub-Club.git"

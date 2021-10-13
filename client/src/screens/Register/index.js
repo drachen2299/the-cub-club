@@ -4,20 +4,20 @@ import Nav from "../../components/Nav";
 
 const Register = (props) => {
 
-  const { id, username } = props.user;
-
   return (
-  <>
-    <section>
-      <Signup setUser={props.setUser}/>
-    </section>
-    {/* conditionally render bear creation */}
-    <section>
-      <Nav username={username}/>
-      <h3>Create your bear!</h3>
-      <Avatar id={id}/>
-    </section>
-  </>
+    <>
+      {props.user ? (
+        <section>
+          <Nav user={props.user} />
+          <h3>Create your bear!</h3>
+          <Avatar user={props.user} />
+        </section>
+      ) : (
+        <section>
+          <Signup setUser={props.setUser} />
+        </section>
+      )}
+    </>
   );
 };
 

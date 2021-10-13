@@ -81,7 +81,7 @@ function App() {
             <Register user={user} setUser={setUser}/>
           </Route>
           <Route exact path="/log-in">
-            <Login />
+            <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
             {/* <Game selectedTile={selectedTile} tiles={tiles} /> */}

@@ -6,7 +6,7 @@ const Avatar = (props) => {
   const [fur, setFur] = useState("brown");
   // const [accessory, setAccessory] = useState(null);
   // const [color, setColor] = useState(null);
-
+  const { id } = props.user;
   const bearSubmit = async (e) => {
     try {
     e.preventDefault();
@@ -15,7 +15,8 @@ const Avatar = (props) => {
       // accessory,
       // color
     };
-    const bear = await createBear(props.id, newBear);
+    const bear = await createBear(id, newBear);
+    console.log(newBear)
     // push user to game room
 
   } catch (e) {
