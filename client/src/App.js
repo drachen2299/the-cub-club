@@ -84,7 +84,7 @@ function App() {
             <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
-            {/* <Game selectedTile={selectedTile} tiles={tiles} /> */}
+            <Game user={user}/> 
           </Route>
         </main>
       </Switch>

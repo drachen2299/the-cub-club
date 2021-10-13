@@ -12,12 +12,10 @@ const Game = (props) => {
     <>
     <Nav />
     <div>
-      <Modal showModal={showModal}/>
+      <Modal showModal={showModal} user={props.user}/>
       <p>This is where you can play the game!</p>
       <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
-      <div className='grid-board'>
-        <Tile {...props}/>
-      </div>
+      
     </div>
     </>
   );

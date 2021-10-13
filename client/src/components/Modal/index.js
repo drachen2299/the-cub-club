@@ -3,8 +3,8 @@ import {getUsers, sendLetter} from '../../services';
 import './index.css';
 
 const Modal = (props) => {
-  const [username, setUsername] = useState('beeboop12')
   const [recipient, setRecipient] = useState({});
+  const [sender, setSender] = useState({});
   const [letter, setLetter] = useState('');
   const [users, setUsers] = useState([]);
 
@@ -12,8 +12,9 @@ const Modal = (props) => {
     try {
       e.preventDefault();
       const letterInfo = {
-        username,
+        recipient,
         letter,
+        sender,
       }
       sendLetter(letterInfo);
     } catch (e) {
@@ -22,10 +23,11 @@ const Modal = (props) => {
   }
 
   useEffect(() => {
-      getUsers().then((newUsers) => {
-        console.log(newUsers);
-        setUsers(newUsers);
-      })
+    setSender(props.user);
+    getUsers().then((newUsers) => {
+      console.log(newUsers);
+      setUsers(newUsers);
+    })
   }, [])
 
   return (
@@ -39,7 +41,10 @@ const Modal = (props) => {
               <ul className="ClubMembersList">
                 {
                   users?.map((user) => (
-                    <button onClick={() => setRecipient(user)}>{user.username}</button>
+                    user.username != sender.username ? 
+                    <button key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
+                    :
+                    null
                   ))
                 }
               </ul>
