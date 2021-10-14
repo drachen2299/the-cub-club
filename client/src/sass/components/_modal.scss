@@ -12,7 +12,8 @@
 
 .ExitButton {
   position: absolute;
-  left: 0;
+  left: 30%;
+  top: 10%;
   z-index: 1;
 }
 
@@ -29,6 +30,8 @@
   min-height: 50vh;
   width: 500px;
   position: absolute;
+  left: 30%;
+  top: 10%;
 }
 
 .ModalTitle {
@@ -56,3 +59,4 @@
   background: none;
   font-family: "Modak", cursive;
 }
+

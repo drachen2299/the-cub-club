@@ -25,3 +25,15 @@
     grid-template-columns: repeat(12, 80px);
     grid-template-rows: repeat(6, 80px);
 }
+
+.mailbox {
+    background-image: url('../../assets/mailbox/mailbox.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    pointer-events: none;
+}
+
+.mailbox:hover {
+    opacity: 0.2;
+}
