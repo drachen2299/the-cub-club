@@ -30,8 +30,6 @@ const Game = (props) => {
       <Nav />
       <div>
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
-        <p>This is where you can play the game!</p>
-        <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
         <div className="game-board">
           <div className="grid-board">
             <Tile setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />

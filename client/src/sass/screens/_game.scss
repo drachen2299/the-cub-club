@@ -15,8 +15,13 @@
 }
 
 .grid-board {
+    background-image: url('../../assets/gameboard-blueprint.png');
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(4, 80px);
+    height: 900px; 
+    width:  1440px;
 }
