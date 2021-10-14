@@ -26,6 +26,9 @@ const Modal = (props) => {
         }
         sendLetter(letterInfo);
         setDidSubmit(!didSubmit);
+        setTimeout(() => {
+          setDidSubmit(false);
+        }, 1000);
       }
     } catch (e) {
       console.error(e.message);
