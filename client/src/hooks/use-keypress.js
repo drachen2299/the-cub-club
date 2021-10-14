@@ -29,13 +29,13 @@ const useKeyPress =(initialTiles = [0,0]) => {
 
             // right
             case 68:
-                if( x === 3 || !canKeyPress) {
+                if( x === 11 || !canKeyPress) {
                     return state;
                 }
                 return { ...state, selectedTile: [y, x + 1]};
             // down
             case 83:
-                if( y === 3 || !canKeyPress) {
+                if( y === 5 || !canKeyPress) {
                     return state;
                 }
                 return { ...state, selectedTile: [y + 1, x]};
