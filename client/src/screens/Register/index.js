@@ -10,7 +10,7 @@ const Register = (props) => {
         <section>
           <Nav user={props.user} />
           <h3>Create your bear!</h3>
-          <Avatar user={props.user} />
+          <Avatar user={props.user} setUser={props.setUser} />
         </section>
       ) : (
         <section>
