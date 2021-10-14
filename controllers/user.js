@@ -50,8 +50,8 @@ const registration = async (req, res) => {
 
 const userBear = async (req, res) => {
   try {
-    const addBearToUser = await User.findByIdAndUpdate(req.params.id, { bear: req.body });
-    return res.status(201).json(addBearToUser)
+    const addBearToUser = await User.findByIdAndUpdate(req.params.id, { bear: req.body }, { new: true });
+    return res.status(201).json(addBearToUser);
   } catch (error) {
     res.status(500).json({ message: error.message });
     console.log(req.params.id, { bear: req.body })

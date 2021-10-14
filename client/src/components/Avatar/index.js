@@ -21,7 +21,7 @@ const Avatar = (props) => {
       // color
     };
     const bear = await createBear(id, newBear);
-    console.log(newBear)
+    props.setUser(bear);
     // push user to game room
     history.push("/game");
   } catch (e) {
