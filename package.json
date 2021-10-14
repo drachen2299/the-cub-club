@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm i && npm run build && cd .."
   },
   "name": "the-cub-club",
   "description": "",
