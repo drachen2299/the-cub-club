@@ -1,0 +1,58 @@
+
+.selected {
+    background-image: url('../../assets/brown-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 1px black;
+    content: "";
+    pointer-events: none;
+}
+
+.black{
+    background-image: url('../../assets/black-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.brown{
+    background-image: url('../../assets/brown-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.panda{
+    background-image: url('../../assets/panda-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.white{
+    background-image: url('../../assets/white-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-board {
+    background-image: url('../../assets/gameboard-blueprint.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px; 
+    width:  1440px;
+    box-sizing: border-box;
+}
+
+.grid-board {
+    padding-top: 160px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 80px);
+    grid-template-rows: repeat(6, 80px);
+}
+
+.mailbox {
+    background-image: url('../../assets/mailbox/mailbox.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.mailbox:hover {
+    opacity: 0.2;
+}

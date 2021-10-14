@@ -9,13 +9,11 @@ const createLetter = async () => {
     const herrderr543 = await User.findOne({ username: "herrderr543" });
     const newLetter = [
         {
-            title: faker.lorem.words(6),
             letter: faker.lorem.paragraph(),
             recipient: derpherder31._id,
             sender: sender._id
         },
         {
-            title: faker.lorem.words(6),
             letter: faker.lorem.paragraph(),
             recipient: herrderr543._id,
             sender: sender._id

@@ -1,27 +1,35 @@
 const db = require("../db");
 const User = require("../models/user");
-const Bear = require("../models/bear");
+const {hashPassword} = require("../utils");
 
 const createUser = async () => {
-    const bears = await Bear.findOne({ color: "panda" });
     const newUser = [
     {
         username: "beeboop12",
         email: "beeb@email.com",
-        bear: bears._id
+        password: hashPassword("testpassword"),
+        bear: {
+
+        }
     },
     {
         username: "derpherder31",
         email: "derp31@email.com",
-        bear: bears._id
+        password: hashPassword("testpassword"),
+        bear: {
+
+        }
     },
     {
         username: "herrderr543",
         email: "heer543@email.com",
-        bear: bears._id
+        password: hashPassword("testpassword"),
+        bear: {
+
+        }
     }
 ]
-
+await User.deleteMany();
 await User.insertMany(newUser)
 };
 
