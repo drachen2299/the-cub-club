@@ -10,8 +10,8 @@
   min-height: 100px;
 }
 
-.ClubMembersContainer {
-  
+.ExitButton {
+  position: absolute;
 }
 
 .Modal {
