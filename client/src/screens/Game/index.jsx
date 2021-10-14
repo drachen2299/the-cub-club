@@ -8,7 +8,7 @@ import { createEmptyBoard } from "../../services";
 
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [tiles, setTiles] = useState(createEmptyBoard(1,1));
+  const [tiles, setTiles] = useState(createEmptyBoard(10,2));
   const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([0,0]);
   useEffect(() => {
     window.addEventListener("keydown", (e) => dispatch({type: e.keyCode}));
