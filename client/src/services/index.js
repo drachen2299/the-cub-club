@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiURL = process.env.NODE_ENV === "development" ? "http://localhost:3001" : "produrl";
+const apiURL = process.env.NODE_ENV === "development" ? "http://localhost:3001/api" : "produrl";
 
 export const defaultRoute = async () => {
   try {
