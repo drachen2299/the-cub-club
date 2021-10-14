@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiURL = process.env.NODE_ENV === "development" ? "http://localhost:3001/api" : "produrl";
+const apiURL = process.env.NODE_ENV === "development" ? "http://localhost:3001/api" : "https://the-cub-club.herokuapp.com/api";
 
 export const defaultRoute = async () => {
   try {
