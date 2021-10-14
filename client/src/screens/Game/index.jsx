@@ -18,6 +18,7 @@ const Game = (props) => {
     };
   }, []);
   useEffect(() => {
+    console.log(props.user);
     // if showmodal dispatch stop keyPress else dispath start keyPress
     if (showModal) {
       dispatch({type: "stop-keypress"})
