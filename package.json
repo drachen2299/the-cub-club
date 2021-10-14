@@ -6,7 +6,8 @@
     "faker": "^5.5.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.10",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1"
   },
   "scripts": {
     "start": "node index.js",

@@ -4,7 +4,7 @@ import Modal from "../../components/Modal";
 import Tile from "../../components/Tile";
 import useKeyPress from "../../hooks/use-keypress";
 import { createEmptyBoard } from "../../services";
-import "./game.css";
+
 
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);

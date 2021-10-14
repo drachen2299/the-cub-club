@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
 const Home = () => {
   return (
-    <section>
+    <section className="home">
+      <h1>THE CUB CLUB</h1>
       <h2>Welcome!</h2>
       <h2>**Instructions will go here**</h2>
       <Link to="/log-in">
