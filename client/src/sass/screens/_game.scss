@@ -5,7 +5,7 @@
 } */
 
 .selected {
-    background-image: url('../../assets/brownBear.png');
+    background-image: url('../../assets/brown-bear/front.png');
     background-position: center;
     background-repeat: no-repeat;
     border: solid 1px black;
@@ -14,14 +14,19 @@
 
 }
 
-.grid-board {
+.game-board {
     background-image: url('../../assets/gameboard-blueprint.png');
     background-position: center;
     background-repeat: no-repeat;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(4, 80px);
     height: 900px; 
     width:  1440px;
+    box-sizing: border-box;
+}
+
+.grid-board {
+    padding-top: 160px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 80px);
+    grid-template-rows: repeat(6, 80px);
 }
