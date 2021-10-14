@@ -11,7 +11,27 @@
     border: solid 1px black;
     content: "";
     pointer-events: none;
+}
 
+.black{
+    background-image: url('../../assets/black-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.brown{
+    background-image: url('../../assets/brown-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.panda{
+    background-image: url('../../assets/panda-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.white{
+    background-image: url('../../assets/white-bear/front.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .game-board {
