@@ -4,7 +4,7 @@ import Home from './screens/Home';
 import Register from './screens/Register';
 import Login from './screens/Login';
 import Game from './screens/Game';
-import './App.css';
+import './sass/input.scss';
 
 function App() {
   const [user, setUser] = useState(null);

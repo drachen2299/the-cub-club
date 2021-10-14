@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import {getUsers, sendLetter} from '../../services';
-import './index.css';
+
 
 const Modal = (props) => {
   const [didSubmit, setDidSubmit] = useState(false);
