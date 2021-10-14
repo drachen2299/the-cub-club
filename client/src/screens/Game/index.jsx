@@ -29,7 +29,7 @@ const Game = (props) => {
     <>
       <Nav />
       <div>
-        <Modal showModal={showModal} user={props.user} />
+        <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <p>This is where you can play the game!</p>
         <button onClick={() => setShowModal(!showModal)}>Show Messages</button>
         <div className="game-board">

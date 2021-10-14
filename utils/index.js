@@ -11,7 +11,7 @@ const createUserInfo = (user) => {
     username: user.username,
     email: user.email,
     bear: {
-      fur: "panda",
+
     },
     id: user._id,
   }
