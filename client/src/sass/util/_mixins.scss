@@ -1,0 +1,7 @@
+@mixin titles {
+    font-family: $main-txt-font-cursive;
+    font-weight: normal;
+    color: $main-txt-color;
+    text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
+}
+
