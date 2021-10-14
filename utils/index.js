@@ -10,9 +10,7 @@ const createUserInfo = (user) => {
   return {
     username: user.username,
     email: user.email,
-    bear: {
-
-    },
+    bear: user.bear,
     id: user._id,
   }
 }
