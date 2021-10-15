@@ -70,6 +70,11 @@ export const loginUser = async (userInfo) => {
   }
 };
 
+export const logoutUser = () => {
+  localStorage.clear("token");
+  }
+
+
 
 export const sendLetter = async (data) => {
   try {

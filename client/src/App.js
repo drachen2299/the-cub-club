@@ -58,6 +58,7 @@ function App() {
             {user ? (
               <Game 
                 user={user} 
+                setUser={setUser}
                 room={room}
                 socket={socket}
               /> 
