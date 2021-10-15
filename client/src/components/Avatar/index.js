@@ -59,7 +59,7 @@ const Avatar = (props) => {
        whiteBear
     ) : (
        pandaBear
-    )}/>
+    )} alt="bear avatar"/>
     </container>
   );
 };

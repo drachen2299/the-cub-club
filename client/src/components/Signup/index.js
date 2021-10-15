@@ -19,7 +19,6 @@ const Signup = (props) => {
       };
       const user = await registerUser(userInfo);
       props.setUser(user);
-      //history.push("/users/new-bear");
     } catch (e) {
       console.error(e.message);
     }

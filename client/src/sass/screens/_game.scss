@@ -51,8 +51,9 @@
     background-position: center;
     background-repeat: no-repeat;
     content: "";
+    transition: transform .2s;
 }
 
 .mailbox:hover {
-    opacity: 0.2;
+    transform: scale(1.2);
 }
