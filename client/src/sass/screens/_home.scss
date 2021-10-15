@@ -4,3 +4,14 @@ h1 {
   color: #E1C16D;
   text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
 }
+
+.home {
+  background-color: rgb(226, 244, 211);
+  background-image: linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));
+}
+
+#home-img {
+  max-width: 100vw;
+// move image to back!
+// logo goes over top log
+}
