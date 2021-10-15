@@ -5,7 +5,8 @@ const roomSchema = new Schema(
     type: {type: String, required: true, unique: true},
     members: [
       {
-        name: {type: String, required: true},
+        username: {type: String, required: true},
+        bear: {type: String, required: true},
         socketId: {type: String, required: true},
         connected: {type: Boolean, default: false},
       }

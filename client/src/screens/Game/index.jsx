@@ -14,7 +14,8 @@ const Game = (props) => {
 
   useEffect(() => {
     socket.emit('add member', {
-      name: user.username
+      username: user.username,
+      bear: user.bear
     });
   }, [])
   useEffect(() => {
@@ -44,7 +45,7 @@ const Game = (props) => {
         <div>
           <p>Hi</p>
           {room?.members.map((member) => (
-            <p>{member.username}</p>
+            <p>{member.username} {member.bear}</p>
           ))}
         </div>
       }
