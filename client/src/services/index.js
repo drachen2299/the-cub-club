@@ -90,7 +90,7 @@ export const createEmptyBoard = (mailboxY, mailboxX) => {
   let arr = [];
   for(let y = 0; y < 6; y++){
     for(let x = 0; x < 12; x++){
-      if (x === mailboxX && y === mailboxY) {
+      if (y === mailboxY && x === mailboxX) {
         arr.push(
           {
             y,

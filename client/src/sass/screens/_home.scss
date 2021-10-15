@@ -1,17 +1,46 @@
-h1 {
+.home-logo {
     font-family: 'Modak', cursive;
   font-weight: normal;
+  font-size: 48px;
   color: #E1C16D;
   text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
+  position: absolute;
+  left: 34%;
+  top: -2%;
+}
+.home-welcome {
+  position: absolute;
+  left: 42%;
+  top: 20%;
+}
+.home-instructions {
+  position: absolute;
+  left: 33%;
+  top: 40%;
+}
+
+.login-button {
+  position: absolute;
+  left: 30%;
+  bottom: 40%;
+  @include login-buttons;
+}
+.signup-button {
+  position: absolute;
+  right: 38%;
+  bottom: 40%;
+  @include login-buttons;
 }
 
 .home {
   background-color: rgb(226, 244, 211);
   background-image: linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));
+  height: 100vh;
 }
 
 #home-img {
   max-width: 100vw;
 // move image to back!
 // logo goes over top log
+position: relative;
 }
