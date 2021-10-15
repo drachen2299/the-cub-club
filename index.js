@@ -33,6 +33,14 @@ app.get("*", (req, res) => {
 
 io.on('connection', (socket) => {
     console.log("connected");
+    socket.join('Overworld');
+    socket.on('add member', (data) => {
+        control.room.addMember(socket, data);
+    })
+    socket.on('disconnect', () => {
+        console.log('user disconnected');
+        control.room.removeMember(socket);
+      })
 })
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}!`));
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}!`));
