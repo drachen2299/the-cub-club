@@ -29,7 +29,7 @@ const Game = (props) => {
 
   return (
     <>
-      <Nav />
+      <Nav user={props.user}/>
       <div>
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <div className="game-board">

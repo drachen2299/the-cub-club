@@ -3,11 +3,10 @@ import { useState, useEffect } from "react";
 import io from 'socket.io-client';
 import Home from './screens/Home';
 import Register from './screens/Register';
-import Avatar from "./components/Avatar";
 import { verifyUser } from "./services";
 import Login from './screens/Login';
 import Game from './screens/Game';
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import './sass/input.scss';
 
 
@@ -29,18 +28,20 @@ function App() {
     })
     return () => newSocket.close();
   }, []);
+  const location = useLocation();
+
   useEffect(() => {
-    const fetchVerifyUser = async () => {
-      
-      const verifiedUser = await verifyUser();
-      if (!verifiedUser) {
-        history.push("/");
-      } else {
-        setUser(verifiedUser);
-      }
+    verifyUser().then((verifiedUser) => setUser(verifiedUser))
+  }, []);
+
+  useEffect(() => {
+    if (user && (location.pathname === '/log-in' || location.pathname === '/')) {
+      history.push('/game')
+    } else if (!user && location.pathname === '/game') {
+      history.push('/')
     }
-    fetchVerifyUser();
-  }, [history])
+  }, [user, location.pathname, history])
+
   return (
     <div className="App">
       <Switch>
@@ -62,8 +63,10 @@ function App() {
             <Login setUser={setUser}/>
           </Route>
           <Route exact path="/game">
-            <Game user={user} /> 
-          </Route>
+            {user ? (
+              <Game user={user} /> 
+            ) : null}
+            </Route>
         </main>
       </Switch>
     </div>

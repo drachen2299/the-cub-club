@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const faker = require("faker");
+
 const {
   createToken,
   createUserInfo,

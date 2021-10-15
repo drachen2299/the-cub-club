@@ -12,9 +12,19 @@
 
 .ExitButton {
   position: absolute;
+  color: $secondary-txt-color;
+  font-family: $main-txt-font-cursive;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
   left: 30%;
   top: 10%;
   z-index: 1;
+}
+
+.ExitButton:hover {
+  @include titles;
 }
 
 .Modal {
@@ -58,5 +68,6 @@
 .SubmitButton {
   background: none;
   font-family: "Modak", cursive;
+  @include titles;
 }
 

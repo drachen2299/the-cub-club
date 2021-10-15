@@ -16,8 +16,11 @@ const Login = (props) => {
         password
       };
       const user = await loginUser(userInfo);
-      props.setUser(user);
-      history.push('/game')
+      if (user) {
+        props.setUser(user);
+        return history.push('/game');
+      } 
+        alert("Invalid username or password")
     } catch (e) {
       console.error(e.message)
     }
