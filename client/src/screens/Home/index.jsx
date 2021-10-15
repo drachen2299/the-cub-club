@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import homeImage from '../../assets/home-asset.png'
 const Home = () => {
   return (
-    <section className="home">
-      <img id='home-img' src={homeImage} alt="Tofu pointing at a sign"/>
-      <h1>THE CUB CLUB</h1>
-      <h2>Welcome!</h2>
-      <h2>**Instructions will go here**</h2>
-      <Link to="/log-in">
-        <button>Login</button>
+    <section className="screen">
+      <img id='main-img' src={homeImage} alt="Tofu pointing at a sign"/>
+      <div id="home-screen-contents">
+      <h1 className="logo">THE CUB CLUB</h1>
+      <h2 className="heading">Welcome!</h2>
+      <h2 className="textfield">**Instructions will go here**</h2>
+      <Link className="btn-1-home" to="/log-in">
+        <button className="home-login-button">Login</button>
       </Link>
-      <Link to="/account-creation">
-        <button>Sign Up</button>
+      <Link className="btn-2-home" to="/account-creation">
+        <button className="home-signup-button">Sign Up</button>
       </Link>
+      </div>
     </section>
   );
 };

@@ -1,7 +1,71 @@
 @mixin titles {
-    font-family: $main-txt-font-cursive;
-    font-weight: normal;
-    color: $main-txt-color;
-    text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
+  font-family: $main-txt-font-cursive;
+  font-weight: normal;
+  color: $main-txt-color;
+  text-shadow: 1px 0 0 #59392a, 0 -1px 0 #59392a, 0 1px 0 #59392a,
+    -1px 0 0 #59392a;
 }
+// Main screen mixins
+@mixin screen {
+  background-color: rgb(226, 244, 211);
+  background-image: linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));
+  height: 100vh;
+}
+
+@mixin main-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin screen-content {
+  position: absolute;
+  height: 70vh;
+  left: 31%;
+  top: 3%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  justify-content: center;
+  
+  
+}
+@mixin logo {
+  font-family: "Modak", cursive;
+  font-weight: normal;
+  font-size: 48px;
+  color: #e1c16d;
+  text-shadow: 1px 0 0 #59392a, 0 -1px 0 #59392a, 0 1px 0 #59392a,
+    -1px 0 0 #59392a;
+}
+@mixin screen-logo {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+@mixin screen-heading {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+@mixin screen-textfield {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+
+@mixin screen-buttons {
+  box-sizing: border-box;
+  color: $main-txt-color;
+  font-size: 32px;
+  font-weight: bold;
+  max-width: fit-content;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid $main-txt-color;
+}
+
+@mixin form-button {
+  grid-column: 1 / 3;
+  grid-row: 6 / 7;
+}
+
 
