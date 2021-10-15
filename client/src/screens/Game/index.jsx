@@ -10,7 +10,14 @@ const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [tiles, setTiles] = useState(createEmptyBoard(1,10));
   const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([3,11]);
+  const {user, room, socket} = props;
 
+  useEffect(() => {
+    socket.emit('add member', {
+      username: user.username,
+      bear: user.bear
+    });
+  }, [])
   useEffect(() => {
     window.addEventListener("keydown", (e) => dispatch({type: e.keyCode}));
     return () => {
@@ -34,6 +41,14 @@ const Game = (props) => {
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <div className="game-board">
           <div className="grid-board">
+          {
+        <div>
+          <p>Hi</p>
+          {room?.members.map((member) => (
+            <p>{member.username} {member.bear}</p>
+          ))}
+        </div>
+      }
             <Tile bear={props.user.bear} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
           </div>
         </div>

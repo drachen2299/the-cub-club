@@ -13,19 +13,18 @@ import './sass/input.scss';
 function App() {
   const [user, setUser] = useState(null);
   const history = useHistory();
+  const [socket, setSocket] = useState(null);
   const [room, setRoom] = useState(null);
   useEffect(() => {
     const newSocket = io(`http://localhost:3001`);
-    newSocket.emit('add member', {
-      name: 'nateshim'
-    });
     newSocket.on('member added', (res) => {
       setRoom(res);
     });
     newSocket.on('room updated', (res) => {
       console.log(res);
       setRoom(res);
-    })
+    });
+    setSocket(newSocket);
     return () => newSocket.close();
   }, []);
   const location = useLocation();
@@ -46,13 +45,6 @@ function App() {
     <div className="App">
       <Switch>
         <main>
-        {
-        <div>
-          {room?.members.map((member) => (
-            <p>{member.socketId}</p>
-          ))}
-        </div>
-      }
           <Route exact path="/">
             <Home/>
           </Route>
@@ -64,7 +56,12 @@ function App() {
           </Route>
           <Route exact path="/game">
             {user ? (
-              <Game user={user} setUser={setUser}/> 
+              <Game 
+                user={user} 
+                setUser={setUser}
+                room={room}
+                socket={socket}
+              /> 
             ) : null}
             </Route>
         </main>
