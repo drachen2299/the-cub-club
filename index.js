@@ -16,7 +16,7 @@ const io = require('socket.io')(server, {
 });
 const api = require("./routes");
 
-app.use(express.static(path.join(__dirname, "client/public")));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use(cors());
 app.use(express.json());
@@ -32,17 +32,7 @@ app.get("*", (req, res) => {
 })
 
 io.on('connection', (socket) => {
-    socket.send("Hello!");
-    socket.join('Overworld');
-
-    socket.on('add member', (data) => {
-        console.log("hello");
-        control.room.addMember(socket, data);
-    });
-    socket.on('disconnect', () => {
-        console.log('user disconnected');
-        control.room.removeMember(socket);
-    })
+    console.log("connected");
 })
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}!`));

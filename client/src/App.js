@@ -1,5 +1,6 @@
 import {Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import io from 'socket.io-client';
 import Home from './screens/Home';
 import Register from './screens/Register';
 import Avatar from "./components/Avatar";
@@ -9,9 +10,16 @@ import Game from './screens/Game';
 import { useHistory } from "react-router-dom";
 import './sass/input.scss';
 
+
 function App() {
   const [user, setUser] = useState(null);
   const history = useHistory();
+  const [room, setRoom] = useState(null);
+  useEffect(() => {
+    const newSocket = io(`http://localhost:3001`);
+    console.log(newSocket);
+    return () => newSocket.close();
+  }, []);
   useEffect(() => {
     const fetchVerifyUser = async () => {
       
