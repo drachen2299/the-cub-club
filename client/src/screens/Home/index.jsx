@@ -3,7 +3,7 @@ import homeImage from '../../assets/home-asset.png'
 const Home = () => {
   return (
     <section className="home">
-      <img id='home-img' src={homeImage} />
+      <img id='home-img' src={homeImage} alt="Tofu pointing at a sign"/>
       <h1>THE CUB CLUB</h1>
       <h2>Welcome!</h2>
       <h2>**Instructions will go here**</h2>
