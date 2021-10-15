@@ -1,0 +1,24 @@
+
+.screen {
+  @include screen;
+}
+
+#main-img {
+  @include main-image;
+}
+
+.logo {
+  @include logo;
+  @include screen-logo;
+}
+.heading {
+  @include screen-heading;
+}
+.textfield {
+  @include screen-textfield;
+}
+
+.form-button {
+  @include screen-buttons;
+  @include form-button;
+}

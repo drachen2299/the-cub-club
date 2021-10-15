@@ -1,34 +1,27 @@
-.home {
-  @include screen;
+#home-screen-contents {
+  @include screen-content;
 }
 
-#home-img {
-  @include main-image;
+
+.btn-1-home {
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
 }
 
-.home-logo {
-  @include logo;
-  @include screen-logo;
-}
-.home-heading {
-  @include screen-heading;
-}
-.home-textfield {
-  @include screen-textfield;
+.btn-2-home {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
 }
 
 .home-login-button {
-  position: absolute;
-  left: 30%;
-  bottom: 40%;
   @include screen-buttons;
+  
 }
 .home-signup-button {
-  position: absolute;
-  right: 38%;
-  bottom: 40%;
   @include screen-buttons;
+  
 }
+
 
 
 
