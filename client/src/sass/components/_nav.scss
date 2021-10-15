@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  background-color: $secondary-txt-color;
+  position: absolute;
+  width: 60vw;
+  min-width: 500px;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+.logo {
+  @include titles;
+  margin: 0 auto 0 0;
+}
+.username {
+  margin: 0;
+}
