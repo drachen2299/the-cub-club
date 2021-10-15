@@ -5,7 +5,7 @@ const Nav = (props) => {
   
   const handleChange = () => {
     logoutUser();
-    props.setUser((curr) => !curr);
+    props.setUser(null);
     history.push("/");
   }
   return (
