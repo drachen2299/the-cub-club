@@ -5,7 +5,7 @@ const { restrict } = require("../utils");
 
 const userRouter = new Router();
 
-//userRouter.get("/all", userController.findAllUsers);
+userRouter.get("/all", userController.findAllUsers);
 userRouter.post("/login", userController.login);
 userRouter.post("/register", userController.registration);
 userRouter.put("/new-bear/:id", userController.userBear)

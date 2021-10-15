@@ -37,10 +37,12 @@ const Modal = (props) => {
 
   useEffect(() => {
     setSender(props.user);
-    getUsers().then((newUsers) => {
-      console.log(newUsers);
-      setUsers(newUsers);
-    })
+     getUsers().then((newUsers) => {
+        console.log(newUsers);
+        setUsers(newUsers);
+      })
+    
+    console.log(users);
   }, [])
 
   return (
@@ -61,7 +63,7 @@ const Modal = (props) => {
                     <h2 className="Header">Club Members</h2>
                     <ul className="ClubMembersList">
                       {
-                        users?.map((user) => (
+                        users.map((user) => (
                           user.username != sender.username ? 
                           <button key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
                           :
