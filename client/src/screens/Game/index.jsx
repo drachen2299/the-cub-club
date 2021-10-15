@@ -8,7 +8,7 @@ import { createEmptyBoard } from "../../services";
 
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [tiles, setTiles] = useState(createEmptyBoard(10,1));
+  const [tiles, setTiles] = useState(createEmptyBoard(1,10));
   const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([3,11]);
 
   useEffect(() => {
