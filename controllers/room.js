@@ -3,7 +3,7 @@ const Room = require('../models/room');
 const addMember = async (socket, data) => {
   const room = await Room.find({type: "Overworld"});
   if (room) {
-    console.log(room[0].members);
+    console.log(data.name);
     room[0].members.push({
       username: data.name,
       connected: true,
