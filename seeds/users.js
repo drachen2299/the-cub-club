@@ -29,7 +29,7 @@ const createUser = async () => {
         }
     }
 ]
-await User.deleteMany();
+//await User.deleteMany();
 await User.insertMany(newUser)
 };
 

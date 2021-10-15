@@ -27,6 +27,7 @@ app.use("/api", api);
 app.get("/api", (req, res) => {
     res.status(200).json({letter:  "Welcome to root route!"});
 })
+app.use(express.static(path.join(__dirname, "client/public", "index.html")));
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client/public", "index.html"));
 })
