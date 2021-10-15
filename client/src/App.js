@@ -64,7 +64,7 @@ function App() {
           </Route>
           <Route exact path="/game">
             {user ? (
-              <Game user={user} /> 
+              <Game user={user} setUser={setUser}/> 
             ) : null}
             </Route>
         </main>
