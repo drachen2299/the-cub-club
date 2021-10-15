@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-const useKeyPress =(initialTiles = [0,0]) => {
+const useKeyPress = (initialTiles = [0,0]) => {
     const [tileState, dispatch] = useReducer((state, action) => {
         const { canKeyPress, selectedTile:[y,x] } = state;
         switch (action.type) {
