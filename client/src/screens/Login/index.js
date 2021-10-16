@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import { loginUser } from "../../services";
-import homeImage from '../../assets/home-asset.png'
+import homeImage from '../../assets/home-asset.png';
 
 const Login = (props) => {
 
@@ -32,7 +32,7 @@ const Login = (props) => {
       <img id="main-img" src={homeImage} alt="Tofu pointing at a sign"/>
       <div id="login-screen-contents">
       <h1 className="logo">THE CUB CLUB</h1>
-      <h3 className="screen-heading">Welcome back!</h3>
+      <h3 className="heading">Welcome back!</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>

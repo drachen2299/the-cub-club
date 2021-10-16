@@ -15,9 +15,13 @@ function App() {
   const history = useHistory();
   const [socket, setSocket] = useState(null);
   const [room, setRoom] = useState(null);
+
   useEffect(() => {
     const newSocket = io(`http://localhost:3001`);
     newSocket.on('member added', (res) => {
+      setRoom(res);
+    });
+    newSocket.on('member moved', (res) => {
       setRoom(res);
     });
     newSocket.on('room updated', (res) => {

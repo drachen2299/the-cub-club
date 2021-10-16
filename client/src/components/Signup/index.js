@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { registerUser } from "../../services";
 import { useHistory } from "react-router-dom";
+import homeImage from '../../assets/home-asset.png';
 const Signup = (props) => {
 
   const [username, setUsername] = useState("");
@@ -25,8 +26,11 @@ const Signup = (props) => {
   }
 
   return (
-    <section>
-      <h3>Create an account!</h3>
+    <section className="screen">
+      <img id="main-img" src={homeImage} alt="Tofu pointing at a sign"/>
+      <div id="register-screen-contents">
+      <h1 className="logo">THE CUB CLUB</h1>
+      <h3 className="heading">Create an account!</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
@@ -36,8 +40,9 @@ const Signup = (props) => {
         <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
         {/* <label htmlFor="confirmPassword">Confirm Password:</label>
         <input id="confirmPassword" type="password" value={confirmPw} onChange={(e) => setConfirmPw(e.target.value)}/> */}
-        <button type="submit">Sign up</button>
+        <button className="form-button" type="submit">Sign up</button>
       </form>
+      </div>
     </section>
   );
 };
