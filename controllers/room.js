@@ -5,7 +5,7 @@ const addMember = async (socket, data) => {
   if (room) {
     room[0].members.push({
       username: data.username,
-      bear: data.bear.fur,
+      bear: data.bear,
       location: data.location,
       connected: true,
       socketId: socket.id,

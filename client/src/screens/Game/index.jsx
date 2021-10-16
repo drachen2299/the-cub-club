@@ -40,7 +40,6 @@ const Game = (props) => {
   }, []);
   useEffect(() => {
     console.log(props.user);
-    console.log(`these are the tiles: ${tiles}`)
     // if showmodal dispatch stop keyPress else dispath start keyPress
     if (showModal) {
       dispatch({type: "stop-keypress"})
