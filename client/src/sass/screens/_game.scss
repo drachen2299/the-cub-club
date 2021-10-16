@@ -57,13 +57,13 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  & .up {
+  .up {
     background-image: url("../../assets/brown-bear/back.png");
   }
-  & .left {
+  .left {
     background-image: url("../../assets/brown-bear/left.png");
   }
-  & .right {
+  .right {
     background-image: url("../../assets/brown-bear/right.png");
   }
 }
