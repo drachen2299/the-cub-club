@@ -20,7 +20,7 @@ const Game = (props) => {
         y: selectedTile[0]
       } 
     })
-  }, [selectedTile])
+  }, [selectedTile, socket, user.username])
   useEffect(() => {
     console.log(room);
     socket.emit('add member', {
