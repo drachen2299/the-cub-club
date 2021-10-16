@@ -25,7 +25,7 @@ const Game = (props) => {
     console.log(room);
     socket.emit('add member', {
       username: user.username,
-      bear: user.bear,
+      bear: user.bear.fur,
       location: {
         x: 11,
         y: 3
@@ -55,7 +55,7 @@ const Game = (props) => {
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <div className="game-board">
           <div className="grid-board">
-            <Tile members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
+            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
           </div>
         </div>
       </div>
