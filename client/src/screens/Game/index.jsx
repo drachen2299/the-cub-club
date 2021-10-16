@@ -39,7 +39,6 @@ const Game = (props) => {
     };
   }, []);
   useEffect(() => {
-    console.log(props.user);
     // if showmodal dispatch stop keyPress else dispath start keyPress
     if (showModal) {
       dispatch({type: "stop-keypress"})
@@ -48,6 +47,10 @@ const Game = (props) => {
     }
   }, [showModal])
 
+  const setBear = () => {
+    <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
+  }
+
   return (
     <>
       <Nav user={props.user} setUser={props.setUser}/>
@@ -55,7 +58,7 @@ const Game = (props) => {
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <div className="game-board">
           <div className="grid-board">
-            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
+            {setBear}
           </div>
         </div>
       </div>
