@@ -43,16 +43,16 @@ const removeMember = async (socket) => {
 const moveMember = async (socket, data) => {
   const room = await Room.find({type: "Overworld"});
   if (room && room[0].members) {
-    room[0].members.map((member, index) => {
+    const newMembers = room[0].members.map((member, index) => {
       if (member.username === data.username) {
-        room[0].members[index].location = data.location;
+        member.location = data.location;
       }
+      return member;
     })
-    Room.findOneAndUpdate({type: "Overworld"}, {members: room[0].members}, {new: true}, (err, updatedRoom) => {
+    Room.findOneAndUpdate({type: "Overworld"}, {members: newMembers}, {new: true}, (err, updatedRoom) => {
       if (err) {
         socket.emit('error', err);
       } else {
-        socket.emit('member moved', updatedRoom);
         socket.to('Overworld').emit('room updated', updatedRoom);
         socket.join('Overworld');
       }
