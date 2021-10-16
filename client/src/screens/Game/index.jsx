@@ -47,9 +47,6 @@ const Game = (props) => {
     }
   }, [showModal])
 
-  const setBear = () => {
-    <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
-  }
 
   return (
     <>
@@ -58,7 +55,7 @@ const Game = (props) => {
         <Modal showModal={showModal} setShowModal={setShowModal} user={props.user} />
         <div className="game-board">
           <div className="grid-board">
-            {setBear}
+            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} />
           </div>
         </div>
       </div>
