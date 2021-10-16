@@ -3,10 +3,10 @@ const Room = require('../models/room');
 const addMember = async (socket, data) => {
   const room = await Room.find({type: "Overworld"});
   if (room) {
-    console.log(data.user);
     room[0].members.push({
       username: data.username,
       bear: data.bear.fur,
+      location: data.location,
       connected: true,
       socketId: socket.id,
     })
@@ -40,8 +40,32 @@ const removeMember = async (socket) => {
   })
 }
 
+const moveMember = async (socket, data) => {
+  const room = await Room.find({type: "Overworld"});
+  if (room && room[0].members) {
+    room[0].members.map((member, index) => {
+      if (member.username === data.username) {
+        room[0].members[index].location = data.location;
+      }
+    })
+    Room.findOneAndUpdate({type: "Overworld"}, {members: room[0].members}, {new: true}, (err, updatedRoom) => {
+      if (err) {
+        socket.emit('error', err);
+      } else {
+        socket.emit('member moved', updatedRoom);
+        socket.to('Overworld').emit('room updated', updatedRoom);
+        socket.join('Overworld');
+      }
+    })
+  } else {
+    console.log("what?");
+    return;
+  }
+};
+
 
 module.exports = {
   addMember,
   removeMember,
+  moveMember
 }

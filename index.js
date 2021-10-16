@@ -37,6 +37,9 @@ io.on('connection', (socket) => {
     socket.on('add member', (data) => {
         control.room.addMember(socket, data);
     })
+    socket.on('move member', (data) => {
+      control.room.moveMember(socket, data);
+    })
     socket.on('disconnect', () => {
         console.log('user disconnected');
         control.room.removeMember(socket);
