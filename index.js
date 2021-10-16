@@ -4,7 +4,7 @@ const http = require("http");
 const logger = require('morgan');
 const path = require("path");
 require('./db');
-const control = require('./controllers');
+const { addMember, removeMember, moveMember } = require('./controllers/room');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = http.createServer(app);
@@ -35,11 +35,14 @@ io.on('connection', (socket) => {
     console.log("connected");
     socket.join('Overworld');
     socket.on('add member', (data) => {
-        control.room.addMember(socket, data);
+        addMember(socket, data);
+    })
+    socket.on('move member', (data) => {
+      moveMember(socket, data);
     })
     socket.on('disconnect', () => {
         console.log('user disconnected');
-        control.room.removeMember(socket);
+        removeMember(socket);
       })
 })
 
