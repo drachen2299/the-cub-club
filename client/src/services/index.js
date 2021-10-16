@@ -86,7 +86,7 @@ export const sendLetter = async (data) => {
 
 
 
-export const createEmptyBoard = (mailboxX, mailboxY) => {
+export const createEmptyBoard = (mailboxY, mailboxX) => {
   let arr = [];
   for(let y = 0; y < 6; y++){
     for(let x = 0; x < 12; x++){
