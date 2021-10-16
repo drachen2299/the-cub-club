@@ -40,7 +40,7 @@ const Tile = (props) => {
                   member.location.x === tile.x && member.location.y === tile.y
               )
               .map((member) => (
-                <div className={member.bear + " members"}></div>
+                member.bear != props.bear.fur ? <div className={member.bear + " members"}></div> : <div className={"members"}></div>
               ))}
           </div>
         </div>
