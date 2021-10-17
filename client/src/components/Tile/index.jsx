@@ -1,18 +1,21 @@
-import { useEffect } from "react";
+import { useState } from "react";
 
 const Tile = (props) => {
   // if w, a, s, d keypress detected, change backgroundImage of fur color class to corresponding sprite angle
-  const bearDirection = (e) => {
-    if (e.key === 'w') {
+  const [direction, setDirection] = useState("")
 
-    } else if (e.key === 'a') {
-      console.log('Left')
-    } else if (e.key === 's') {
-      console.log('Down')
-    } else if (e.key === 'd') {
-      console.log('Right')
-    }
-  }
+  window.addEventListener("keydown", (e) => {
+      if (e.key === 'w') {
+        setDirection(`${props.bear.fur}-up`)
+      } else if (e.key === 'a') {
+        setDirection(`${props.bear.fur}-left`)
+      } else if (e.key === 's') {
+        setDirection(`${props.bear.fur}`)
+      } else if (e.key === 'd') {
+        setDirection(`${props.bear.fur}-right`)
+      }
+    });
+
   return (
     <>
       {props.tiles.map((tile, i) => (
@@ -30,7 +33,7 @@ const Tile = (props) => {
             ${
               props.selectedTile[1] === tile.x &&
               props.selectedTile[0] === tile.y &&
-              `selected ${props.bear.fur} `
+              `selected ${direction}`
             }`}
         >
           <div>
