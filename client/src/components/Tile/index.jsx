@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Tile = (props) => {
   // if w, a, s, d keypress detected, change backgroundImage of fur color class to corresponding sprite angle
-  const [direction, setDirection] = useState("")
+  const [direction, setDirection] = useState(`${props.bear.fur}`)
 
   window.addEventListener("keydown", (e) => {
       if (e.key === 'w') {
