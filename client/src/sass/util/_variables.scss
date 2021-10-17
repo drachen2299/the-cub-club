@@ -1,4 +1,8 @@
 $main-background-color: #000;
 $main-txt-color: #E1C16D;
 $main-txt-font-cursive: 'Modak', cursive;
+$secondary-text-font: 'Patrick Hand';
 $secondary-txt-color: #59392A;
+
+$desktop-image: url("../../assets/home-asset.png"), linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));
+$mobile-image: url("../../assets/home-mobile.png"), linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));

@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const apiURL = process.env.NODE_ENV === "development" ? "http://localhost:3001/api" : "https://the-cub-club.herokuapp.com/api";
+const apiURL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3001/api"
+    : "https://the-cub-club.herokuapp.com/api";
 
 export const defaultRoute = async () => {
   try {
@@ -9,16 +12,19 @@ export const defaultRoute = async () => {
   } catch (e) {
     console.error(e.message);
   }
-}
+};
 
 export const createBear = async (userId, newBear) => {
   try {
-    const response = await axios.put(`${apiURL}/users/new-bear/${userId}`, newBear);
+    const response = await axios.put(
+      `${apiURL}/users/new-bear/${userId}`,
+      newBear
+    );
     return response.data;
   } catch (e) {
     console.error(e.message);
   }
-}
+};
 
 export const getUsers = async () => {
   try {
@@ -27,12 +33,12 @@ export const getUsers = async () => {
   } catch (e) {
     console.error(e.message);
   }
-}
+};
 
 export const registerUser = async (userInfo) => {
   try {
     const response = await axios.post(`${apiURL}/users/register`, userInfo);
-    localStorage.setItem("token", response.data.token)
+    localStorage.setItem("token", response.data.token);
     return response.data.user;
   } catch (error) {
     console.error(error.message);
@@ -42,18 +48,18 @@ export const registerUser = async (userInfo) => {
 const buildHeaders = (token) => {
   return {
     headers: {
-      Authorization: `Bearer ${token}`
-    }
-  }
+      Authorization: `Bearer ${token}`,
+    },
+  };
 };
 
 export const verifyUser = async () => {
   try {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       const config = buildHeaders(token);
       const response = await axios.get(`${apiURL}/users/authenticate`, config);
-      return response.data.user;    
+      return response.data.user;
     }
     return null;
   } catch (error) {
@@ -63,18 +69,16 @@ export const verifyUser = async () => {
 export const loginUser = async (userInfo) => {
   try {
     const response = await axios.post(`${apiURL}/users/login`, userInfo);
-    localStorage.setItem("token", response.data.token)
+    localStorage.setItem("token", response.data.token);
     return response.data.user;
   } catch (error) {
-    console.error(error.message)
+    console.error(error.message);
   }
 };
 
 export const logoutUser = () => {
   localStorage.clear("token");
-  }
-
-
+};
 
 export const sendLetter = async (data) => {
   try {
@@ -82,32 +86,26 @@ export const sendLetter = async (data) => {
   } catch (e) {
     console.error(e.message);
   }
-}
-
-
+};
 
 export const createEmptyBoard = (mailboxY, mailboxX) => {
   let arr = [];
-  for(let y = 0; y < 6; y++){
-    for(let x = 0; x < 12; x++){
+  for (let y = 0; y < 6; y++) {
+    for (let x = 0; x < 12; x++) {
       if (x === mailboxX && y === mailboxY) {
-        arr.push(
-          {
-            x,
-            y,
-            contents: "mailbox"
-          }
-        )
+        arr.push({
+          x,
+          y,
+          contents: "mailbox",
+        });
       } else {
-        arr.push(
-          {
-            x,
-            y,
-            contents: null
-          }
-          )
+        arr.push({
+          x,
+          y,
+          contents: null,
+        });
       }
     }
   }
   return arr;
-}
+};
