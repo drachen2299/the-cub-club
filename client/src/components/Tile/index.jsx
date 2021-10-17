@@ -34,18 +34,25 @@ const Tile = (props) => {
               props.selectedTile[1] === tile.x &&
               props.selectedTile[0] === tile.y &&
               `selected ${direction}`
-            }`}
-        >
-          <div>
-            {props.members
+            }
+            ${props.members
               ?.filter(
                 (member) =>
                   member.location.x === tile.x && member.location.y === tile.y
               )
               .map((member) => (
-                member.bear != props.bear.fur ? <div className={member.bear + " members"}></div> : <div className={"members"}></div>
+                member.username != props.user.username ? `${member.bear} members` : "members"
               ))}
-          </div>
+            `}
+        >
+          {props.members
+              ?.filter(
+                (member) =>
+                  member.location.x === tile.x && member.location.y === tile.y
+              )
+              .map((member) => (
+                member.username != props.user.username ? member.username : ""
+              ))}
         </div>
       ))}
     </>
