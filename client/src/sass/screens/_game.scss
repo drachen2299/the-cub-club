@@ -38,22 +38,26 @@
 
 .black {
   background-image: url("../../assets/black-bear/front.png");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .black-up {
     background-image: url("../../assets/black-bear/back.png");
-  }
-  .black-left {
-    background-image: url("../../assets/black-bear/left.png");
-  }
+}
+.black-left {
+  background-image: url("../../assets/black-bear/left.png");
+}
 .black-right {
     background-image: url("../../assets/black-bear/right.png");
-  }
+}
+
 .brown {
   background-image: url("../../assets/brown-bear/front.png");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+}
+.brown-step {
+  background-image: url("../../assets/brown-bear/front-step.png");
 }
 .brown-up {
     background-image: url("../../assets/brown-bear/back.png");
