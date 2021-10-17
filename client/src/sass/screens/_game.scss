@@ -29,7 +29,6 @@
 }
 
 .selected {
-  background-image: url("../../assets/brown-bear/front.png");
   background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
@@ -41,31 +40,29 @@
   background-image: url("../../assets/black-bear/front.png");
   background-position: center;
   background-repeat: no-repeat;
-
-  & .up {
+}
+.black-up {
     background-image: url("../../assets/black-bear/back.png");
   }
-  & .left {
+  .black-left {
     background-image: url("../../assets/black-bear/left.png");
   }
-  & .right {
+.black-right {
     background-image: url("../../assets/black-bear/right.png");
   }
-}
 .brown {
   background-image: url("../../assets/brown-bear/front.png");
   background-position: center;
   background-repeat: no-repeat;
-
-  .up {
+}
+.brown-up {
     background-image: url("../../assets/brown-bear/back.png");
-  }
-  .left {
+}
+.brown-left {
     background-image: url("../../assets/brown-bear/left.png");
-  }
-  .right {
-    background-image: url("../../assets/brown-bear/right.png");
-  }
+}
+.brown-right {
+  background-image: url("../../assets/brown-bear/right.png");
 }
 
 .panda {
@@ -73,8 +70,27 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.panda-up {
+  background-image: url("../../assets/panda-bear/back.png");
+}
+.panda-left {
+  background-image: url("../../assets/panda-bear/left.png");
+}
+.panda-right {
+  background-image: url("../../assets/panda-bear/right.png");
+}
+
 .white {
   background-image: url("../../assets/white-bear/front.png");
   background-position: center;
   background-repeat: no-repeat;
+}
+.white-up {
+  background-image: url("../../assets/white-bear/back.png");
+}
+.white-left {
+  background-image: url("../../assets/white-bear/left.png");
+}
+.white-right {
+  background-image: url("../../assets/white-bear/right.png");
 }
