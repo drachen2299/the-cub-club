@@ -7,16 +7,25 @@ const Tile = (props) => {
 
   window.addEventListener("keydown", (e) => {
       if (e.key === 'w') {
-        setDirection(`${fur}-up`)
+        setDirection(`${fur}-up-step`);
+        setTimeout(() => {
+          setDirection(`${fur}-up`) 
+        }, 300)
       } else if (e.key === 'a') {
-        setDirection(`${fur}-left`)
+        setDirection(`${fur}-left-step`);
+        setTimeout(() => {
+          setDirection(`${fur}-left`) 
+        }, 300)
       } else if (e.key === 's') {
         setDirection(`${fur}-step`);
         setTimeout(() => {
           setDirection(`${fur}`) 
-        }, 500)
+        }, 300)
       } else if (e.key === 'd') {
-        setDirection(`${fur}-right`)
+        setDirection(`${fur}-right-step`);
+        setTimeout(() => {
+          setDirection(`${fur}-right`) 
+        }, 300)
       }
     });
 

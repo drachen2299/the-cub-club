@@ -41,14 +41,26 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.black-step {
+  background-image: url("../../assets/black-bear/front-step.png");
+}
 .black-up {
     background-image: url("../../assets/black-bear/back.png");
+}
+.black-up-step {
+  background-image: url("../../assets/black-bear/back-step.png");
 }
 .black-left {
   background-image: url("../../assets/black-bear/left.png");
 }
+.black-left-step {
+  background-image: url("../../assets/black-bear/left-step.png");
+}
 .black-right {
     background-image: url("../../assets/black-bear/right.png");
+}
+.black-right-step {
+  background-image: url("../../assets/black-bear/right-step.png");
 }
 
 .brown {
@@ -62,11 +74,20 @@
 .brown-up {
     background-image: url("../../assets/brown-bear/back.png");
 }
+.brown-up-step {
+  background-image: url("../../assets/brown-bear/back-step.png");
+}
 .brown-left {
     background-image: url("../../assets/brown-bear/left.png");
 }
+.brown-left-step {
+  background-image: url("../../assets/brown-bear/left-step.png");
+}
 .brown-right {
   background-image: url("../../assets/brown-bear/right.png");
+}
+.brown-right-step {
+  background-image: url("../../assets/brown-bear/right-step.png");
 }
 
 .panda {
@@ -74,14 +95,26 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.panda-step {
+  background-image: url("../../assets/panda-bear/front-step.png");
+}
 .panda-up {
   background-image: url("../../assets/panda-bear/back.png");
+}
+.panda-up-step {
+  background-image: url("../../assets/panda-bear/back-step.png");
 }
 .panda-left {
   background-image: url("../../assets/panda-bear/left.png");
 }
+.panda-left-step {
+  background-image: url("../../assets/panda-bear/left-step.png");
+}
 .panda-right {
   background-image: url("../../assets/panda-bear/right.png");
+}
+.panda-right-step {
+  background-image: url("../../assets/panda-bear/right-step.png");
 }
 
 .white {
@@ -89,12 +122,24 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.white-step {
+  background-image: url("../../assets/white-bear/front-step.png");
+}
 .white-up {
   background-image: url("../../assets/white-bear/back.png");
+}
+.white-up-step {
+  background-image: url("../../assets/white-bear/back-step.png");
 }
 .white-left {
   background-image: url("../../assets/white-bear/left.png");
 }
+.white-left-step {
+  background-image: url("../../assets/white-bear/left-step.png");
+}
 .white-right {
   background-image: url("../../assets/white-bear/right.png");
+}
+.white-right-step {
+  background-image: url("../../assets/white-bear/right-step.png");
 }
