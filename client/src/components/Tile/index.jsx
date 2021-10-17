@@ -31,7 +31,8 @@ const Tile = (props) => {
 
   return (
     <>
-      {props.tiles.map((tile, i) => (
+    
+      {props.tiles.map((tile) => (
         <div
           onClick={() => {
             if (
@@ -42,7 +43,7 @@ const Tile = (props) => {
             )
               props.setShowModal((curr) => !curr);
           }}
-          className={`${tile.contents === "mailbox" ? "mailbox" : ""} 
+          className={`${tile.contents === "mailbox" ? "mailbox" : null} 
             ${
               props.selectedTile[1] === tile.x &&
               props.selectedTile[0] === tile.y &&
@@ -68,6 +69,7 @@ const Tile = (props) => {
               ))}
         </div>
       ))}
+      
     </>
   );
 };

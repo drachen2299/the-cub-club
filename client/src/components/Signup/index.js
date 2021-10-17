@@ -27,22 +27,23 @@ const Signup = (props) => {
 
   return (
     <section className="screen">
-      <img id="main-img" src={homeImage} alt="Tofu pointing at a sign"/>
-      <div id="register-screen-contents">
-      <h1 className="logo">THE CUB CLUB</h1>
-      <h3 className="heading">Create an account!</h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
-        <label htmlFor="email">Email:</label>
-        <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <label htmlFor="password">Password:</label>
-        <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-        {/* <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input id="confirmPassword" type="password" value={confirmPw} onChange={(e) => setConfirmPw(e.target.value)}/> */}
-        <button className="form-button" type="submit">Sign up</button>
-      </form>
-      </div>
+      
+        <div id="register-screen-contents">
+        <h1 className="logo">THE CUB CLUB</h1>
+        <h3 className="heading">Create an account!</h3>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="username">Username:</label>
+          <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+          <label htmlFor="email">Email:</label>
+          <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <label htmlFor="password">Password:</label>
+          <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+          {/* <label htmlFor="confirmPassword">Confirm Password:</label>
+          <input id="confirmPassword" type="password" value={confirmPw} onChange={(e) => setConfirmPw(e.target.value)}/> */}
+          <button className="form-button" type="submit">Sign up</button>
+        </form>
+        </div>
+      
     </section>
   );
 };
