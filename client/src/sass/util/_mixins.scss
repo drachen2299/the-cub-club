@@ -7,7 +7,7 @@
 }
 // Main screen mixins
 @mixin screen {
-  background: url("../../assets/home-asset.png"), linear-gradient(rgb(226, 244, 211), rgb(127, 150, 113));
+  display: flex;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100vh;
@@ -32,22 +32,40 @@
   box-sizing: border-box;
   margin: 0 auto;
   font-family: $secondary-text-font;
-  height: 70vh;
-  width: fit-content;
+  
+  
+  
+}
+@mixin screen-content-mobile {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 58vh;
+}
+@mixin screen-content-desktop {
   padding-top: 20px;
   padding-right: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(7, 1fr);
   justify-content: center;
-  
-  
+}
+@mixin inner-content {
+  height: 70%;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2/1fr);
+  grid-template-rows: repeat(4/1fr);
+  width: max-content;
 }
 @mixin logo {
   font-family: "Modak", cursive;
   font-weight: normal;
   font-size: 48px;
   color: $main-txt-color;
+  height: 50px;
   text-shadow: 1px 0 0 #59392a, 0 -1px 0 #59392a, 0 1px 0 #59392a,
     -1px 0 0 #59392a;
 }
@@ -72,7 +90,7 @@
   color: $main-txt-color;
   font-size: 32px;
   font-weight: bold;
-  max-width: fit-content;
+  max-height: 51px;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: transparent;

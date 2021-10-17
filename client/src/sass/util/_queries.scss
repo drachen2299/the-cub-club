@@ -1,0 +1,19 @@
+@media (min-width: 320px) {
+    .screen {
+        background: $mobile-image;
+        
+    }
+    #home-screen-contents {
+        @include screen-content-mobile;
+    }
+    .inner-content {
+        @include inner-content;
+    }
+    a {
+        display: inline-block;
+    }
+}
+@media (min-width: 425px){
+
+}
+@media (min-width: 725px){}
