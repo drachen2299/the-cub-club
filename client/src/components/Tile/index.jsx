@@ -18,6 +18,7 @@ const Tile = (props) => {
 
   return (
     <>
+    
       {props.tiles.map((tile) => (
         <div
           onClick={() => {
@@ -48,6 +49,7 @@ const Tile = (props) => {
           </div>
         </div>
       ))}
+      
     </>
   );
 };
