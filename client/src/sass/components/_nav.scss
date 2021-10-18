@@ -28,3 +28,9 @@ nav {
   align-items: center;
   text-decoration: none;
 }
+
+@media only screen and (orientation:portrait){
+  nav {
+    width: 100vh;
+  }
+}
