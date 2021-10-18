@@ -3,40 +3,13 @@
   @include screen;
 }
 
-.float-contents-desktop {
-  @include float-content;
-}
 
-#main-img {
-  @include main-image;
-}
 
 .logo {
   @include logo;
-  @include screen-logo;
 }
+
 .heading {
   @include screen-heading;
-}
-.textfield {
-  @include screen-textfield;
-}
-
-.form-button {
-  @include screen-buttons;
-  @include form-button;
-}
-
-form {
-  @include forms;
-}
-label {
-  @include form-labels;
-}
-input {
-  @include form-inputs;
-}
-input:focus {
-  @include form-inputs-focus;
 }
 
