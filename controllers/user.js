@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Room = require("../models/room");
 
 const {
   createToken,
@@ -66,10 +67,25 @@ const findAllUsers = async (req, res) => {
   }
 };
 
+const newRoom = async (req, res) => {
+  try {
+    const newRoom = {
+      type: "Overworld",
+      members: [
+      ]
+    };
+    const room = await Room.create(newRoom);
+    return res.status(200).json({ room: room});
+  } catch (e) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
 module.exports = {
   findAllUsers,
   authenticate,
   registration,
   login,
   userBear,
+  newRoom,
 };

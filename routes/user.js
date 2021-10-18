@@ -10,4 +10,5 @@ userRouter.post("/login", userController.login);
 userRouter.post("/register", userController.registration);
 userRouter.put("/new-bear/:id", userController.userBear)
 userRouter.get("/authenticate", restrict, userController.authenticate);
+userRouter.post("/new-room", userController.newRoom);
 module.exports = userRouter;
