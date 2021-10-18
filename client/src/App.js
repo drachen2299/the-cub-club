@@ -16,7 +16,7 @@ function App() {
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
-    const newSocket = io(`http://the-cub-club.herokuapp.com/3001`);
+    const newSocket = io();
     newSocket.on("member added", (res) => {
       setRoom(res);
     });
