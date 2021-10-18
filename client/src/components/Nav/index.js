@@ -13,7 +13,7 @@ const Nav = (props) => {
       <h1 className="logo">THE CUB CLUB</h1>
       <h3 className="username">{props.user.username}</h3>
       <Link to="/">
-        <button onClick={handleChange}>Log Out</button>
+        <button className="button" onClick={handleChange}>Log Out</button>
       </Link>
     </nav>
   );

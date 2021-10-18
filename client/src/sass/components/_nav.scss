@@ -4,6 +4,8 @@ nav {
   background-color: $secondary-txt-color;
   border-radius: 7px;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
   padding: 5px 10px;
 }
 .logo {
@@ -29,8 +31,8 @@ nav {
   text-decoration: none;
 }
 
-@media only screen and (orientation:portrait){
-  nav {
-    width: 100vh;
-  }
-}
+// @media only screen and (orientation:portrait){
+//   nav {
+//     width: 100vh;
+//   }
+// }
