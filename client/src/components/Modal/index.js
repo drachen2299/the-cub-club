@@ -10,7 +10,6 @@ const Modal = (props) => {
   const handleTab2 = () => setActiveTab("tab2");
 
 
-
   return (
     <div>
       {props.showModal ? (

@@ -9,7 +9,6 @@ const main = async () => {
     }]
     await Room.deleteMany();
     await Room.insertMany(room)
-    console.log("Created room!")
 }
 const run = async () => {
     await main()

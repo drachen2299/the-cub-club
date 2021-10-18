@@ -20,7 +20,6 @@ const addMember = async (socket, data) => {
       }
     })
   } else {
-    console.log("what?");
     return;
   }
 };
@@ -58,7 +57,6 @@ const moveMember = async (socket, data) => {
       }
     })
   } else {
-    console.log("what?");
     return;
   }
 };
