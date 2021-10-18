@@ -3,6 +3,7 @@
     background-image: url("../../assets/arrows.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    padding-top: -100px;
     right: 3%;
     bottom: 3%;
     display: grid;
@@ -10,4 +11,10 @@
     grid-template-rows: repeat(3, 1fr);
     width: 200px;
     height: 200px;
+}
+
+@media (min-width: 760px) {
+    .controller {
+    display:none;
+}
 }

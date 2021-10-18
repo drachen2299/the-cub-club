@@ -50,6 +50,7 @@ const Game = (props) => {
 
   return (
     <>
+      
       <Nav user={props.user} setUser={props.setUser} />
       <div>
         <Modal
