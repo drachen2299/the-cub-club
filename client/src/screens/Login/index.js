@@ -30,26 +30,28 @@ const Login = (props) => {
     <section className="screen">
       <div id="login-screen-contents">
         <h1 className="logo">THE CUB CLUB</h1>
-        <h3 className="heading">Welcome back!</h3>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="username">Username:</label>
-          <input
-            id="username"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <label htmlFor="password">Password:</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="form-button" type="submit">
-            Log in
-          </button>
-        </form>
+        <div className="inner-content">
+          <h3 className="heading">Welcome back!</h3>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="username">Username:</label>
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <label htmlFor="password">Password:</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className="form-button" type="submit">
+              Log in
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
