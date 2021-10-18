@@ -23,7 +23,7 @@ const Modal = (props) => {
       setMail(response);
     };
     fetchMail();
-    console.log(mail);
+    //console.log(mail);
   }, [props.showModal, handleDelete]);
 
   return (

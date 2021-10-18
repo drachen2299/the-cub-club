@@ -34,14 +34,14 @@ app.get("*", (req, res) => {
 io.on('connection', (socket) => {
   socket.join('Overworld');
   socket.on('add member', (data) => {
-    console.log("user connected");
+    //console.log("user connected");
     addMember(socket, data);
   });
   socket.on('move member', (data) => {
     moveMember(socket, data);
   });
   socket.on('disconnect', () => {
-    console.log('user disconnected');
+    //console.log('user disconnected');
     removeMember(socket);
   });
 });

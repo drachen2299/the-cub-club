@@ -52,11 +52,11 @@ const Tile = (props) => {
     }
   }, [props.keyPressed, fur])
   useEffect(() => {
-    console.log(props.showModal)
+    //console.log(props.showModal)
     if (!props.showModal) {
       window.addEventListener("keydown", handleKeyPress);
     } else {
-      console.log("comeon")
+      //console.log("comeon")
       window.removeEventListener("keydown", handleKeyPress);
     }
   }, [props.showModal])
