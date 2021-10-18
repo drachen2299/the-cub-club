@@ -4,18 +4,6 @@ import { createRoom } from "../../services";
 
 const Home = () => {
 
-  const handleClick = async (e) => {
-    try {
-      e.preventDefault();
-      const newRoom = {
-        type: "Overworld",
-        members: [],
-      };
-      await createRoom(newRoom);
-    } catch (e) {
-      console.error(e.message);
-    }
-  };
   return (
     <section className="screen">
       {/* <img id="main-img" src={homeImage} alt="Tofu pointing at a sign" /> */}
@@ -31,7 +19,6 @@ const Home = () => {
           <Link className="btn-2-home" to="/account-creation">
             <button className="home-signup-button">Sign Up</button>
           </Link>
-          <button onClick={handleClick}>Create Room</button>
         </div>
       </div>
     </section>

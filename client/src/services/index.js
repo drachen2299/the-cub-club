@@ -26,15 +26,6 @@ export const createBear = async (userId, newBear) => {
   }
 };
 
-export const createRoom = async (newRoom) => {
-  try {
-    const res = await axios.post(`${apiURL}/users/new-room`, newRoom);
-    return res.data;
-  } catch(e) {
-    console.error(e.message);
-  }
-}
-
 export const getUsers = async () => {
   try {
     const res = await axios.get(`${apiURL}/users/all`);
@@ -87,14 +78,6 @@ export const loginUser = async (userInfo) => {
 
 export const logoutUser = () => {
   localStorage.clear("token");
-};
-
-export const sendLetter = async (data) => {
-  try {
-    await axios.post(`${apiURL}/letters/new-letter`, data);
-  } catch (e) {
-    console.error(e.message);
-  }
 };
 
 export const createEmptyBoard = (mailboxY, mailboxX) => {

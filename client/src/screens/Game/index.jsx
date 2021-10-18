@@ -6,11 +6,13 @@ import useKeyPress from "../../hooks/use-keypress";
 import Controller from "../../components/Controller";
 import { createEmptyBoard } from "../../services";
 
+
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [tiles, setTiles] = useState(createEmptyBoard(1, 10));
   const [{ selectedTile, canKeyPress, keyPressed }, dispatch] = useKeyPress([3, 11]);
   const { user, room, socket } = props;
+
 
   useEffect(() => {
     socket.emit("move member", {
@@ -48,8 +50,10 @@ const Game = (props) => {
     }
   }, [showModal]);
 
+
   return (
     <>
+      
       <Nav user={props.user} setUser={props.setUser} />
       <div>
         <Modal

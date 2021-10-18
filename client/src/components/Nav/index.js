@@ -10,10 +10,10 @@ const Nav = (props) => {
   }
   return (
     <nav>
-      <h1 class="logo">THE CUB CLUB</h1>
-      <h3 class="username">{props.user.username}</h3>
-      <Link class="link" to="/">
-        <button class="button" onClick={handleChange}>Log Out</button>
+      <h1 className="logo">THE CUB CLUB</h1>
+      <h3 className="username">{props.user.username}</h3>
+      <Link to="/">
+        <button onClick={handleChange}>Log Out</button>
       </Link>
     </nav>
   );
