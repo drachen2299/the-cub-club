@@ -9,16 +9,12 @@ import { useHistory } from "react-router";
 const Avatar = (props) => {
   const [fur, setFur] = useState("brown");
   const history = useHistory();
-  // const [accessory, setAccessory] = useState(null);
-  // const [color, setColor] = useState(null);
   const { id } = props.user;
   const bearSubmit = async (e) => {
     try {
     e.preventDefault();
     const newBear = {
       fur,
-      // accessory,
-      // color
     };
     const bear = await createBear(id, newBear);
     props.setUser(bear);
@@ -31,8 +27,8 @@ const Avatar = (props) => {
   }
 
   return (
-    <container>
-    <form onSubmit={bearSubmit}>
+    <container className="avatar-creation">
+    <form className="avatar-form" onSubmit={bearSubmit}>
       <label htmlFor="fur">Fur:</label>
       <select id="fur" onChange={(e) => setFur(e.target.value)}>
         <option value={"brown"}>Brown Bear</option>
@@ -40,15 +36,7 @@ const Avatar = (props) => {
         <option value={"white"}>Polar Bear</option>
         <option value={"panda"}>Panda Bear</option>
       </select>
-      {/* <label htmlFor="accessory">Accessory:</label>
-      <select id="accessory">
-        <option></option>
-      </select>
-      <label htmlFor="color">Color:</label>
-      <select id="color">
-        <option></option>
-      </select> */}
-      <button type="submit">Done!</button>
+      <button className="avatar-button" type="submit">Done!</button>
     </form>
     <img
     src={fur === "brown" ? (

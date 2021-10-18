@@ -42,7 +42,6 @@ const Game = (props) => {
     };
   }, []);
   useEffect(() => {
-    // if showmodal dispatch stop keyPress else dispath start keyPress
     if (showModal) {
       dispatch({ type: "stop-keypress" });
     } else {
@@ -52,10 +51,9 @@ const Game = (props) => {
 
 
   return (
-    <>
-      
-      <Nav user={props.user} setUser={props.setUser} />
-      <div>
+    <>      
+      <div className="game">
+        <Nav className="Nav" user={props.user} setUser={props.setUser} />
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}

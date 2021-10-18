@@ -30,11 +30,11 @@
 }
 @mixin screen-content-desktop {
   align-self: flex-start;
-  display: grid;
-  height: 70vh;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-content: center;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
 }
 @mixin inner-content-mobile {
   height: 70%;
@@ -45,13 +45,12 @@
 }
 @mixin inner-content-desktop {
   grid-column: 1 / 3;
-  grid-row: 3 / 8;
+  grid-row: 2 / 3;
+  height: 60%;
 }
 @mixin logo {
   font-family: "Modak", cursive;
   font-weight: normal;
-  font-size: 48px;
-  height: 50px;
   text-shadow: 1px 0 0 #59392a, 0 -1px 0 #59392a, 0 1px 0 #59392a,
     -1px 0 0 #59392a;
 }
@@ -65,20 +64,20 @@
   grid-row: 2 / 3;
 }
 
-
-
 // desktop
-@mixin screen-logo-grid {
+@mixin screen-logo-desktop {
+  padding-top: 40px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  align-self: flex-start;
+}
+@mixin screen-heading-desktop {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
-@mixin screen-heading-grid-desktop {
+@mixin screen-textfield-desktop {
   grid-column: 1 / 3;
-  grid-row: 3 / 4;
-}
-@mixin screen-textfield-grid-desktop {
-  grid-column: 1 / 3;
-  grid-row: 4 / 5;
+  grid-row: 2 / 3;
 }
 
 @mixin screen-heading {
@@ -88,24 +87,22 @@
 @mixin screen-buttons {
   box-sizing: border-box;
   color: $main-txt-color;
+  font-family: $secondary-text-font;
   cursor: pointer;
   font-size: 32px;
   font-weight: bold;
-  max-height: 51px;
-  padding: 5px 10px;
+  max-width: 150px;
   border-radius: 5px;
   background-color: transparent;
   border: 2px solid $main-txt-color;
 }
 
-@mixin forms {
+@mixin forms-mobile {
   grid-column: 1/3;
   grid-row: 2/3;
-  display: grid;
-  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
   color: $main-txt-color;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
 }
@@ -129,4 +126,15 @@
   grid-column: 1 / 3;
   grid-row: 4 / 8;
   justify-self: center;
+}
+
+@mixin form-desktop {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: grid;
+  row-gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
 }
