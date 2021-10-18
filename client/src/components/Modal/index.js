@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
-import {getUsers, sendLetter} from '../../services';
+import { getUsers } from '../../services';
+import { sendLetter } from '../../services/letters';
 
 
 const Modal = (props) => {
@@ -37,7 +38,7 @@ const Modal = (props) => {
 
   useEffect(() => {
     setSender(props.user);
-     getUsers().then((newUsers) => {
+    getUsers().then((newUsers) => {
         console.log(newUsers);
         setUsers(newUsers);
       })
