@@ -31,8 +31,8 @@ const Avatar = (props) => {
   }
 
   return (
-    <container>
-    <form onSubmit={bearSubmit}>
+    <container className="avatar-creation">
+    <form className="avatar-form" onSubmit={bearSubmit}>
       <label htmlFor="fur">Fur:</label>
       <select id="fur" onChange={(e) => setFur(e.target.value)}>
         <option value={"brown"}>Brown Bear</option>
@@ -40,15 +40,7 @@ const Avatar = (props) => {
         <option value={"white"}>Polar Bear</option>
         <option value={"panda"}>Panda Bear</option>
       </select>
-      {/* <label htmlFor="accessory">Accessory:</label>
-      <select id="accessory">
-        <option></option>
-      </select>
-      <label htmlFor="color">Color:</label>
-      <select id="color">
-        <option></option>
-      </select> */}
-      <button type="submit">Done!</button>
+      <button className="avatar-button" type="submit">Done!</button>
     </form>
     <img
     src={fur === "brown" ? (
