@@ -80,14 +80,6 @@ export const logoutUser = () => {
   localStorage.clear("token");
 };
 
-export const sendLetter = async (data) => {
-  try {
-    await axios.post(`${apiURL}/letters/new-letter`, data);
-  } catch (e) {
-    console.error(e.message);
-  }
-};
-
 export const createEmptyBoard = (mailboxY, mailboxX) => {
   let arr = [];
   for (let y = 0; y < 6; y++) {

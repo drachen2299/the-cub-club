@@ -13,21 +13,12 @@
   max-height: 200px;
 }
 
-.ExitButton {
-  position: absolute;
-  color: $secondary-txt-color;
-  font-family: $main-txt-font-cursive;
+.ClubMembersList>button {
+  font-family: $secondary-text-font;
   font-size: 20px;
-  padding: 10px 20px;
   background-color: transparent;
   border: none;
-  left: 30%;
-  top: 10%;
-  z-index: 4;
-}
-
-.ExitButton:hover {
-  @include titles;
+  margin-bottom: 2px;
 }
 
 .Modal {
@@ -67,13 +58,30 @@
 .MessageFormContainer {
   display: flex;
   justify-content: start;
+  align-items: center;
   flex-direction: column;
   margin: 10px;
 }
 
+.MessageFormContainer>p {
+  width: 130px;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  border-color: #59392a;
+  border-radius: 5px;
+  min-height: 100px;
+  margin: 10px;
+  overflow: auto;
+}
+
 .MessageFormHeader {
   display: flex;
-  
+}
+
+.MessageFormHeader>h3 {
+  font-family: $secondary-text-font;
+  margin-left: 5px;
 }
 
 .MessageForm {
@@ -81,14 +89,48 @@
   flex-direction: column;
   align-items: center;
 }
-
-.SubmitButton {
+.MessageForm>input {
+  background-color: white;
+}
+.SubmitButton, .DeleteButton {
   background: none;
   font-family: "Modak", cursive;
+  font-size: 17px;
+  width: 120px;
   border-radius: 7px;
   border-style: solid;
   border-color: $secondary-txt-color;
-  padding: 5px;
+  @include titles;
+}
+
+.tab-nav {
+  @include titles;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.tab-nav li {
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+  margin: 0 15px;
+}
+
+.ExitButton {
+  color: $secondary-txt-color;
+  font-family: $main-txt-font-cursive;
+  font-size: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  z-index: 4;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+}
+
+.ExitButton:hover {
   @include titles;
 }
 
@@ -115,3 +157,6 @@
   border-radius: 5px;
 }
 
+.outlet {
+  display: flex;
+}

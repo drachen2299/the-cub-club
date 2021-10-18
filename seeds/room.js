@@ -7,7 +7,7 @@ const main = async () => {
       members: [
       ]
     }]
-
+    await Room.deleteMany();
     await Room.insertMany(room)
 }
 const run = async () => {

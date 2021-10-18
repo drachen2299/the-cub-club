@@ -10,7 +10,7 @@ const createLetter = async () => {
     const newLetter = [
         {
             letter: faker.lorem.paragraph(),
-            recipient: derpherder31._id,
+            recipient: herrderr543._id,
             sender: sender._id
         },
         {
@@ -20,6 +20,7 @@ const createLetter = async () => {
         }
         
     ]
+    await Letter.deleteMany();
     await Letter.insertMany(newLetter);
 };
 

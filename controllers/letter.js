@@ -1,9 +1,6 @@
 const User = require("../models/user");
 const Letter = require("../models/letter");
 const faker = require("faker");
-const {
-  createUserInfo
-} = require('../utils');
 
 const findAllLetters = async (req, res) => {
   try {
@@ -11,9 +8,35 @@ const findAllLetters = async (req, res) => {
       .find()
       .populate("sender")
       .populate("recipient");
-    res.status(200).json(letters);
+    return res.status(200).json(letters);
   } catch (error) {
-    res.status(500).json({ error: error.Letter });
+    return res.status(500).json(error);
+  }
+};
+
+const findLetterById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const letter = await Letter.findById(id);
+    if (!letter) {
+      return res.status(404).json({ message: "Letter not found" })
+    }
+    return res.status(200).json(letter);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+const findLettersByRecipient = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const letters = await Letter.find({ recipient: id }).populate("sender");
+    if (!letters) {
+      return res.status(404).json({ message: "Letters not found" })
+    }
+    return res.status(200).json(letters);
+  } catch (error) {
+    res.status(500).json(error);
   }
 };
 
@@ -28,10 +51,29 @@ const sendLetter = async (req, res) => {
     };
     const letter = new Letter(newLetter);
     await letter.save();
-    res.status(201).json({message: "Letter sent!"});
+    return res.status(201).json({message: "Letter sent!"});
   } catch (error) {
-    res.status(500).json({ error: error.Letter });
+    res.status(500).json(error);
   }
 };
 
-module.exports = { findAllLetters, sendLetter };
+const destroyLetter = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const letter = await Letter.findByIdAndDelete(id);
+    if (!letter) {
+      return res.status(404).json({ message: "Letter not found" })
+    }
+    return res.status(204).json(letter)
+  } catch (error) {
+    res.status(500).json(error);
+  }
+}; 
+
+module.exports = { 
+  findAllLetters, 
+  sendLetter,
+  findLetterById,
+  findLettersByRecipient,
+  destroyLetter
+};
