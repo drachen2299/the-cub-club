@@ -28,7 +28,29 @@ const Tile = (props) => {
       }, 300)
     }
   }, [])
-  
+  useEffect(() =>{
+    if(props.keyPressed === "w"){
+      setDirection(`${fur}-up-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-up`) 
+      }, 300)
+    }else if (props.keyPressed === 'a') {
+      setDirection(`${fur}-left-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-left`) 
+      }, 300)
+    } else if (props.keyPressed === 's') {
+      setDirection(`${fur}-step`);
+      setTimeout(() => {
+        setDirection(`${fur}`) 
+      }, 300)
+    } else if (props.keyPressed === 'd') {
+      setDirection(`${fur}-right-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-right`) 
+      }, 300)
+    }
+  }, [props.keyPressed, fur])
   useEffect(() => {
     console.log(props.showModal)
     if (!props.showModal) {
