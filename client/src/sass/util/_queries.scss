@@ -1,0 +1,95 @@
+@media (min-width: 320px) {
+    .screen {
+        background: $mobile-image;
+        
+    }
+    #home-screen-contents,
+    #login-screen-contents,
+    #register-screen-contents {
+        @include screen-content-mobile;
+    }
+    .inner-content {
+        @include inner-content-mobile;
+    }
+    .heading {
+        @include screen-heading-grid-mobile;
+    }
+    .textfield {
+        @include screen-textfield-grid-mobile;
+    }
+    a {
+        display: inline-block;
+    }
+    .form-button {
+        @include screen-buttons;
+        @include form-button;
+      }
+      
+      form {
+        @include forms;
+      }
+      label {
+        @include form-labels;
+      }
+      input {
+        @include form-inputs;
+      }
+      input:focus {
+        @include form-inputs-focus;
+      }
+
+}
+@media (min-width: 760px) {
+    .screen {
+        background: $desktop-image;
+
+    }
+    #home-screen-contents,
+    #login-screen-contents,
+    #register-screen-contents {
+        align-self: flex-start;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80vh;
+    }
+    .logo {
+        padding-top: 40px;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        align-self: flex-start;
+      }
+    .inner-content {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        height: 60%;
+    }
+    
+      .heading {
+        grid-column: 1 / 3;
+        grid-row: 1/2;
+      }
+      .textfield {
+        grid-column: 1 / 3;
+        grid-row: 2/3;
+      }
+      
+      .form-button {
+        @include screen-buttons;
+        @include form-button;
+      }
+      
+      form {
+        @include forms;
+      }
+      label {
+        @include form-labels;
+      }
+      input {
+        @include form-inputs;
+      }
+      input:focus {
+        @include form-inputs-focus;
+      }
+}

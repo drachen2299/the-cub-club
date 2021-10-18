@@ -1,0 +1,15 @@
+
+.screen {
+  @include screen;
+}
+
+
+
+.logo {
+  @include logo;
+}
+
+.heading {
+  @include screen-heading;
+}
+

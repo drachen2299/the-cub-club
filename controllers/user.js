@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const faker = require("faker");
+
 const {
   createToken,
   createUserInfo,
@@ -54,7 +54,6 @@ const userBear = async (req, res) => {
     return res.status(201).json(addBearToUser);
   } catch (error) {
     res.status(500).json({ message: error.message });
-    console.log(req.params.id, { bear: req.body })
   }
 }
 

@@ -3,15 +3,16 @@ import Avatar from "../../components/Avatar";
 import Nav from "../../components/Nav";
 
 const Register = (props) => {
-
   return (
     <>
       {props.user ? (
-        <section>
+        <>
           <Nav user={props.user} />
-          <h3>Create your bear!</h3>
-          <Avatar user={props.user} setUser={props.setUser} />
-        </section>
+          <container id="choose-bear">
+            <h3 id="choose-bear-title">Create your bear!</h3>
+            <Avatar user={props.user} setUser={props.setUser} />
+          </container>
+        </>
       ) : (
         <section>
           <Signup setUser={props.setUser} />

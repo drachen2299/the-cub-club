@@ -1,6 +1,28 @@
-h1 {
-    font-family: 'Modak', cursive;
-  font-weight: normal;
-  color: #E1C16D;
-  text-shadow: 1px 0 0 #59392A, 0 -1px 0 #59392A, 0 1px 0 #59392A, -1px 0 0 #59392A;
+#home-screen-contents {
+  @include screen-content;
+  
 }
+
+
+.btn-1-home {
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+}
+
+.btn-2-home {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+.home-login-button {
+  @include screen-buttons;
+  
+}
+.home-signup-button {
+  @include screen-buttons;
+  
+}
+
+
+
+

@@ -1,58 +1,189 @@
-
-.selected {
-    background-image: url('../../assets/brown-bear/front.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid 1px black;
-    content: "";
-    pointer-events: none;
-}
-
-.black{
-    background-image: url('../../assets/black-bear/front.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.brown{
-    background-image: url('../../assets/brown-bear/front.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.panda{
-    background-image: url('../../assets/panda-bear/front.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.white{
-    background-image: url('../../assets/white-bear/front.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .game-board {
-    background-image: url('../../assets/gameboard-blueprint.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 900px; 
-    width:  1440px;
-    box-sizing: border-box;
+  background-attachment: fixed;
+  background-image: url("../../assets/gameboard-blueprint.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .grid-board {
-    padding-top: 160px;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(12, 80px);
-    grid-template-rows: repeat(6, 80px);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, 80px);
+  grid-template-rows: repeat(6, 80px);
 }
 
 .mailbox {
-    background-image: url('../../assets/mailbox/mailbox.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    content: "";
+  background-image: url("../../assets/mailbox/mailbox.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  content: "";
+  transition: transform 0.2s;
 }
 
 .mailbox:hover {
-    opacity: 0.2;
+  transform: scale(1.2);
+}
+
+.selected {
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+}
+
+.black {
+  background-image: url("../../assets/black-bear/front.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.black-step {
+  background-image: url("../../assets/black-bear/front-step.png");
+  background-size: contain;
+}
+.black-up {
+    background-image: url("../../assets/black-bear/back.png");
+    background-size: contain;
+}
+.black-up-step {
+  background-image: url("../../assets/black-bear/back-step.png");
+  background-size: contain;
+}
+.black-left {
+  background-image: url("../../assets/black-bear/left.png");
+  background-size: contain;
+}
+.black-left-step {
+  background-image: url("../../assets/black-bear/left-step.png");
+  background-size: contain;
+}
+.black-right {
+    background-image: url("../../assets/black-bear/right.png");
+    background-size: contain;
+}
+.black-right-step {
+  background-image: url("../../assets/black-bear/right-step.png");
+  background-size: contain;
+}
+
+.brown {
+  background-image: url("../../assets/brown-bear/front.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.brown-step {
+  background-image: url("../../assets/brown-bear/front-step.png");
+  background-size: contain;
+}
+.brown-up {
+  background-image: url("../../assets/brown-bear/back.png");
+  background-size: contain;
+}
+.brown-up-step {
+  background-image: url("../../assets/brown-bear/back-step.png");
+  background-size: contain;
+}
+.brown-left {
+  background-image: url("../../assets/brown-bear/left.png");
+  background-size: contain;
+}
+.brown-left-step {
+  background-image: url("../../assets/brown-bear/left-step.png");
+  background-size: contain;
+}
+.brown-right {
+  background-image: url("../../assets/brown-bear/right.png");
+  background-size: contain;
+}
+.brown-right-step {
+  background-image: url("../../assets/brown-bear/right-step.png");
+  background-size: contain;
+}
+
+.panda {
+  background-image: url("../../assets/panda-bear/front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.panda-step {
+  background-image: url("../../assets/panda-bear/front-step.png");
+  background-size: contain;
+}
+.panda-up {
+  background-image: url("../../assets/panda-bear/back.png");
+  background-size: contain;
+}
+.panda-up-step {
+  background-image: url("../../assets/panda-bear/back-step.png");
+  background-size: contain;
+}
+.panda-left {
+  background-image: url("../../assets/panda-bear/left.png");
+  background-size: contain;
+}
+.panda-left-step {
+  background-image: url("../../assets/panda-bear/left-step.png");
+  background-size: contain;
+}
+.panda-right {
+  background-image: url("../../assets/panda-bear/right.png");
+  background-size: contain;
+}
+.panda-right-step {
+  background-image: url("../../assets/panda-bear/right-step.png");
+  background-size: contain;
+}
+
+.white {
+  background-image: url("../../assets/white-bear/front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.white-step {
+  background-image: url("../../assets/white-bear/front-step.png");
+  background-size: contain;
+}
+.white-up {
+  background-image: url("../../assets/white-bear/back.png");
+  background-size: contain;
+}
+.white-up-step {
+  background-image: url("../../assets/white-bear/back-step.png");
+  background-size: contain;
+}
+.white-left {
+  background-image: url("../../assets/white-bear/left.png");
+  background-size: contain;
+}
+.white-left-step {
+  background-image: url("../../assets/white-bear/left-step.png");
+  background-size: contain;
+}
+.white-right {
+  background-image: url("../../assets/white-bear/right.png");
+  background-size: contain;
+}
+.white-right-step {
+  background-image: url("../../assets/white-bear/right-step.png");
+  background-size: contain;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  .game-board {
+    background-position: center 40px;
+  }
+  .grid-board {
+    padding-bottom: 80px;
+    grid-template-columns: repeat(12, 40px);
+    grid-template-rows: repeat(6, 40px);
+  }
 }

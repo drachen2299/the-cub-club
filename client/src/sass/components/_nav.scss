@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  flex: 1;
+  background-color: $secondary-txt-color;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+.logo {
+  @include titles;
+  margin-right: auto;
+  padding: 10px;
+}
+.username {
+  @include screen-content;
+  font-size: 48px;
+  color: $main-txt-color;
+  margin: 4px;
+  padding-right: 10px;
+}
+
+.button {
+  @include screen-buttons;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
