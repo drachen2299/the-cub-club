@@ -59,7 +59,7 @@ const Game = (props) => {
 
         <div className="game-board">
           <div className="grid-board">
-            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user}/>
+            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user} showModal={showModal} setShowModal={setShowModal}/>
           </div>
         </div>
       </div>
