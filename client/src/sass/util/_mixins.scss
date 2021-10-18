@@ -116,7 +116,7 @@
 @mixin form-inputs {
   border: 2px solid $main-txt-color;
   height: 25px;
-  color: white;
+  color: $main-txt-color;
   background: transparent;
   border-radius: 5px;
 }
