@@ -88,6 +88,7 @@
 @mixin screen-buttons {
   box-sizing: border-box;
   color: $main-txt-color;
+  cursor: pointer;
   font-size: 32px;
   font-weight: bold;
   max-height: 51px;

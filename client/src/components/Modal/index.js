@@ -62,7 +62,7 @@ const Modal = (props) => {
                       {
                         users.map((user) => (
                           user.username != sender.username ? 
-                          <button key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
+                          <button className="member" key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
                           :
                           null
                           ))
@@ -72,7 +72,7 @@ const Modal = (props) => {
                   <div className="MessageFormContainer">
                     <div className="MessageFormHeader">
                       <h2 className="Header">To: </h2>
-                      <h3>{recipient?.username}</h3>
+                      <h3 className="recipient">{recipient?.username}</h3>
                     </div>
                     <form className="MessageForm" onSubmit={handleSubmit}>
                       <label htmlFor="message">
