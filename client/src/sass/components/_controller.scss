@@ -2,12 +2,15 @@
     position: absolute;
     background-image: url("../../assets/arrows.png");
     background-repeat: no-repeat;
-    background-size:contain;
-    right: 3%;
-    bottom: 3%;
+    background-size:initial;
+    background-position: center center;
+    left: 10%;
+    bottom: 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    width: 100px;
+    height: 100px;
 }
 
 @media (min-width: 760px) {
