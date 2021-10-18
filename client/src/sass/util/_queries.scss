@@ -3,7 +3,9 @@
         background: $mobile-image;
         
     }
-    #home-screen-contents {
+    #home-screen-contents,
+    #login-screen-contents,
+    #register-screen-contents {
         @include screen-content-mobile;
     }
     .inner-content {
@@ -18,8 +20,26 @@
     a {
         display: inline-block;
     }
+    .form-button {
+        @include screen-buttons;
+        @include form-button;
+      }
+      
+      form {
+        @include forms;
+      }
+      label {
+        @include form-labels;
+      }
+      input {
+        @include form-inputs;
+      }
+      input:focus {
+        @include form-inputs-focus;
+      }
+
 }
-@media (min-width: 600px) {
+@media (min-width: 760px) {
     .screen {
         background: $desktop-image;
 
