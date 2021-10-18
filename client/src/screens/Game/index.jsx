@@ -3,12 +3,13 @@ import Nav from "../../components/Nav";
 import Modal from "../../components/Modal";
 import Tile from "../../components/Tile";
 import useKeyPress from "../../hooks/use-keypress";
+import Controller from "../../components/Controller";
 import { createEmptyBoard } from "../../services";
 
 const Game = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [tiles, setTiles] = useState(createEmptyBoard(1, 10));
-  const [{ selectedTile, canKeyPress }, dispatch] = useKeyPress([3, 11]);
+  const [{ selectedTile, canKeyPress, keyPressed }, dispatch] = useKeyPress([3, 11]);
   const { user, room, socket } = props;
 
   useEffect(() => {
@@ -21,7 +22,6 @@ const Game = (props) => {
     });
   }, [selectedTile, socket, user.username]);
   useEffect(() => {
-    console.log(room);
     socket.emit("add member", {
       username: user.username,
       bear: user.bear.fur,
@@ -60,8 +60,9 @@ const Game = (props) => {
 
         <div className="game-board">
           <div className="grid-board">
-            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user}/>
+            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user} showModal={showModal} keyPressed={keyPressed}/>
           </div>
+          <Controller dispatch={dispatch}/>
         </div>
       </div>
     </>

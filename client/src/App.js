@@ -6,7 +6,6 @@ import Register from "./screens/Register";
 import { verifyUser } from "./services";
 import Login from "./screens/Login";
 import Game from "./screens/Game";
-import Controller from "./components/Controller";
 import { useHistory, useLocation } from "react-router-dom";
 import "./sass/input.scss";
 
@@ -24,8 +23,7 @@ function App() {
     newSocket.on("member moved", (res) => {
       setRoom(res);
     });
-    newSocket.on("room updated", (res) => {
-      console.log(res);
+    newSocket.on('room updated', (res) => {
       setRoom(res);
     });
     setSocket(newSocket);
@@ -71,7 +69,6 @@ function App() {
                 />
               
             ) : null}
-            <Controller />
           </Route>
         </main>
       </Switch>

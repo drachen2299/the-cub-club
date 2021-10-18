@@ -9,7 +9,6 @@
 }
 
 .grid-board {
-  padding-top: 160px;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(12, 80px);
@@ -179,8 +178,11 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  .game-board {
+    background-position: center 40px;
+  }
   .grid-board {
-    padding-top: 80px;
+    padding-bottom: 80px;
     grid-template-columns: repeat(12, 40px);
     grid-template-rows: repeat(6, 40px);
   }
