@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://the-cub-club.herokuapp.com",
     methods: ["GET", "POST"]
   }
 });
@@ -28,8 +28,8 @@ app.get("/api", (req, res) => {
   res.status(200).json({letter:  "Welcome to root route!"});
 });
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
-})
+  res.sendFile(path.join(__dirname, "client/public", "index.html"));
+});
 
 io.on('connection', (socket) => {
   socket.join('Overworld');
