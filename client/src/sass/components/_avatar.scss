@@ -1,0 +1,20 @@
+.avatar-form {
+    color: $secondary-txt-color;
+    height: 120px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+
+.avatar-button {
+    @include screen-buttons;
+    color: $secondary-txt-color;
+    border-color: $secondary-txt-color;
+}
+
+#fur {
+    text-align: center;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid $secondary-txt-color;
+}
