@@ -26,15 +26,6 @@ export const createBear = async (userId, newBear) => {
   }
 };
 
-export const createRoom = async (newRoom) => {
-  try {
-    const res = await axios.post(`${apiURL}/users/new-room`, newRoom);
-    return res.data;
-  } catch(e) {
-    console.error(e.message);
-  }
-}
-
 export const getUsers = async () => {
   try {
     const res = await axios.get(`${apiURL}/users/all`);
