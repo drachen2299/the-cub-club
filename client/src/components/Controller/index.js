@@ -5,13 +5,13 @@ const Controller = (props) => {
         <div>
             <div className="controller">
                 <div></div>
-                <div onClick={() => props.dispatch({ type: "w"})}>up</div>
+                <div onClick={() => props.dispatch({ type: "w"})}></div>
                 <div></div>
-                <div onClick={() => props.dispatch({ type: "a"})}>left</div>
+                <div onClick={() => props.dispatch({ type: "a"})}></div>
                 <div></div>
-                <div onClick={() => props.dispatch({ type: "d"})}>right</div>
+                <div onClick={() => props.dispatch({ type: "d"})}></div>
                 <div></div>
-                <div onClick={() => props.dispatch({ type: "s"})}>down</div>
+                <div onClick={() => props.dispatch({ type: "s"})}></div>
                 <div></div>
             </div>
         </div>
