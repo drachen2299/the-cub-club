@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
 import SendMail from "../SendMail";
 import ReadMail from "../ReadMail";
-import { checkMail } from "../../services/letters";
+import { checkMail, deleteLetter } from "../../services/letters";
 
 const Modal = (props) => {
   const [activeTab, setActiveTab] = useState("tab1");
   const handleTab1 = () => setActiveTab("tab1");
   const handleTab2 = () => setActiveTab("tab2");
   const [mail, setMail] = useState([]);
+
+  const handleDelete = async (letterId) => {
+    try {
+      await deleteLetter(letterId);
+    } catch (e) {
+      console.error(e.message)
+    }
+  };
 
   useEffect(() => {
     const fetchMail = async () => {
@@ -16,7 +24,7 @@ const Modal = (props) => {
     };
     fetchMail();
     console.log(mail);
-  }, [props.showModal]);
+  }, [props.showModal, handleDelete]);
 
   return (
     <div>
@@ -48,6 +56,7 @@ const Modal = (props) => {
                 setActiveTab={setActiveTab}
                 user={props.user}
                 mail={mail}
+                handleDelete={handleDelete}
               />
             ) : (
               <SendMail user={props.user} />
