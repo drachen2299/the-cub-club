@@ -38,11 +38,8 @@ const Modal = (props) => {
   useEffect(() => {
     setSender(props.user);
      getUsers().then((newUsers) => {
-        console.log(newUsers);
         setUsers(newUsers);
-      })
-    
-    console.log(users);
+      });
   }, [])
 
   return (
@@ -65,7 +62,7 @@ const Modal = (props) => {
                       {
                         users.map((user) => (
                           user.username != sender.username ? 
-                          <button key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
+                          <button className="member" key={user._id} onClick={() => setRecipient(user)}>{user.username}</button>
                           :
                           null
                           ))
@@ -75,13 +72,13 @@ const Modal = (props) => {
                   <div className="MessageFormContainer">
                     <div className="MessageFormHeader">
                       <h2 className="Header">To: </h2>
-                      <h3>{recipient?.username}</h3>
+                      <h3 className="recipient">{recipient?.username}</h3>
                     </div>
                     <form className="MessageForm" onSubmit={handleSubmit}>
                       <label htmlFor="message">
                         <h2 className="Header">Message:</h2>
                       </label>
-                      <input id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
+                      <input class="modalInput" id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
                       {!isValidLetter ? <div className="ErrorMessage">Letter is empty!</div> : <div></div>}
                       {!isValidRecipient ? <div className="ErrorMessage">Pick someone to send your letter to!</div> : <div></div>}
                       <button className="SubmitButton" type="submit">Send!</button>

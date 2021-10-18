@@ -12,8 +12,8 @@ const Nav = (props) => {
     <nav>
       <h1 class="logo">THE CUB CLUB</h1>
       <h3 class="username">{props.user.username}</h3>
-      <Link to="/">
-        <button onClick={handleChange}>Log Out</button>
+      <Link class="link" to="/">
+        <button class="button" onClick={handleChange}>Log Out</button>
       </Link>
     </nav>
   );

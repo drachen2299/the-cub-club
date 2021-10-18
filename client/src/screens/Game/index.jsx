@@ -21,7 +21,6 @@ const Game = (props) => {
     });
   }, [selectedTile, socket, user.username]);
   useEffect(() => {
-    console.log(room);
     socket.emit("add member", {
       username: user.username,
       bear: user.bear.fur,
@@ -60,7 +59,7 @@ const Game = (props) => {
 
         <div className="game-board">
           <div className="grid-board">
-            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user}/>
+            <Tile bear={props.user.bear} members={room?.members} setShowModal={setShowModal} selectedTile={selectedTile} tiles={tiles} user={user} showModal={showModal} setShowModal={setShowModal}/>
           </div>
         </div>
       </div>

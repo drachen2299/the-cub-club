@@ -25,7 +25,6 @@ function App() {
       setRoom(res);
     });
     newSocket.on('room updated', (res) => {
-      console.log(res);
       setRoom(res);
     });
     setSocket(newSocket);

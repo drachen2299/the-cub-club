@@ -1,34 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const Tile = (props) => {
   const { fur } = props.bear;
   // if w, a, s, d keypress detected, change backgroundImage of fur color class to corresponding sprite angle
-  const [direction, setDirection] = useState(`${fur}`)
+  const [direction, setDirection] = useState(`${fur}`);
 
-  window.addEventListener("keydown", (e) => {
-      if (e.key === 'w') {
-        setDirection(`${fur}-up-step`);
-        setTimeout(() => {
-          setDirection(`${fur}-up`) 
-        }, 300)
-      } else if (e.key === 'a') {
-        setDirection(`${fur}-left-step`);
-        setTimeout(() => {
-          setDirection(`${fur}-left`) 
-        }, 300)
-      } else if (e.key === 's') {
-        setDirection(`${fur}-step`);
-        setTimeout(() => {
-          setDirection(`${fur}`) 
-        }, 300)
-      } else if (e.key === 'd') {
-        setDirection(`${fur}-right-step`);
-        setTimeout(() => {
-          setDirection(`${fur}-right`) 
-        }, 300)
-      }
-    });
-
+  const handleKeyPress = useCallback((e) => {
+    if (e.key === 'w') {
+      setDirection(`${fur}-up-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-up`) 
+      }, 300)
+    } else if (e.key === 'a') {
+      setDirection(`${fur}-left-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-left`) 
+      }, 300)
+    } else if (e.key === 's') {
+      setDirection(`${fur}-step`);
+      setTimeout(() => {
+        setDirection(`${fur}`) 
+      }, 300)
+    } else if (e.key === 'd') {
+      setDirection(`${fur}-right-step`);
+      setTimeout(() => {
+        setDirection(`${fur}-right`) 
+      }, 300)
+    }
+  }, [])
+  
+  useEffect(() => {
+    console.log(props.showModal)
+    if (!props.showModal) {
+      window.addEventListener("keydown", handleKeyPress);
+    } else {
+      console.log("comeon")
+      window.removeEventListener("keydown", handleKeyPress);
+    }
+  }, [props.showModal])
   return (
     <>
     
