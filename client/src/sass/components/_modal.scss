@@ -13,21 +13,12 @@
   max-height: 200px;
 }
 
-.ExitButton {
-  position: absolute;
-  color: $secondary-txt-color;
-  font-family: $main-txt-font-cursive;
+.ClubMembersList>button {
+  font-family: $secondary-text-font;
   font-size: 20px;
-  padding: 10px 20px;
   background-color: transparent;
   border: none;
-  left: 30%;
-  top: 10%;
-  z-index: 4;
-}
-
-.ExitButton:hover {
-  @include titles;
+  margin-bottom: 2px;
 }
 
 .Modal {
@@ -73,7 +64,11 @@
 
 .MessageFormHeader {
   display: flex;
-  
+}
+
+.MessageFormHeader>h3 {
+  font-family: $secondary-text-font;
+  margin-left: 5px;
 }
 
 .MessageForm {
@@ -92,36 +87,35 @@
   @include titles;
 }
 
-ul.nav {
+.tab-nav {
   @include titles;
-  width: 60%;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border: 1px solid #39A2DB;
-  border-radius: 2rem;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
 }
-ul.nav li {
-  width: 50%;
+.tab-nav li {
   list-style: none;
   text-align: center;
   cursor: pointer;
   transition: all 0.7s;
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
-}
-ul.nav li:nth-child(2) {
-  border-radius: 0;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  margin: 0 15px;
 }
 
-ul.nav li.active {
-  background: #39A2DB;
+.ExitButton {
+  color: $secondary-txt-color;
+  font-family: $main-txt-font-cursive;
+  font-size: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  z-index: 4;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+}
+
+.ExitButton:hover {
+  @include titles;
 }
 
 .member {

@@ -1,9 +1,6 @@
 const User = require("../models/user");
 const Letter = require("../models/letter");
 const faker = require("faker");
-const {
-  createUserInfo
-} = require('../utils');
 
 const findAllLetters = async (req, res) => {
   try {
@@ -33,7 +30,10 @@ const findLetterById = async (req, res) => {
 const findLettersByRecipient = async (req, res) => {
   try {
     const { id } = req.params;
-    const letters = await Letter.find({ id }).populate("sender");
+    const letters = await Letter.find({ recipient: id }).populate("sender");
+    if (!letters) {
+      return res.status(404).json({ message: "Letters not found" })
+    }
     return res.status(200).json(letters);
   } catch (error) {
     res.status(500).json(error);
