@@ -2,17 +2,8 @@ import React, { useState } from "react";
 import { readLetter, deleteLetter } from "../../services/letters";
 
 const ReadMail = (props) => {
-  // const [letterContents, setLetterContents] = useState("");
 
-  // const fetchLetter = async (letterId) => {
-  //   try {
-  //     const thisLetter = await readLetter(letterId);
-  //     setLetterContents(thisLetter);
-  //     return;
-  //   } catch (e) {
-  //     console.error(e.message)
-  //   }
-  // }
+  const [activeLetter, setActiveLetter] = useState({});
 
   const handleDelete = async (letterId) => {
     try {
@@ -23,22 +14,22 @@ const ReadMail = (props) => {
   }
 
   return (
-    <container>
+    <div className="ModalScreenContainer">
+      <section class="ClubMembersContainer">
       <h2 className="Header">Mail</h2>
       <ul className="ClubMembersList">
         {props.mail.map((letter) =>
-            <button key={letter._id}>
+            <button key={letter._id} onClick={() => setActiveLetter(letter)} >
               {letter.sender.username}
             </button>
           )}
       </ul>
-      {props.mail.map((letter) => (
-      <div className="MessageFormContainer hidden" key={letter._id}>
-        <p>{letter.letter}</p>
-        <button onClick={() => handleDelete(letter._id)}>Delete Letter</button>
-      </div>
-      ))}
-    </container>
+      </section>
+      <section className="MessageFormContainer">
+        <p>{activeLetter.letter}</p>
+        <button className="DeleteButton" onClick={() => handleDelete(activeLetter._id)}>Delete Letter</button>
+      </section>
+    </div>
   );
 };
 
