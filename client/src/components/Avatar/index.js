@@ -9,16 +9,12 @@ import { useHistory } from "react-router";
 const Avatar = (props) => {
   const [fur, setFur] = useState("brown");
   const history = useHistory();
-  // const [accessory, setAccessory] = useState(null);
-  // const [color, setColor] = useState(null);
   const { id } = props.user;
   const bearSubmit = async (e) => {
     try {
     e.preventDefault();
     const newBear = {
       fur,
-      // accessory,
-      // color
     };
     const bear = await createBear(id, newBear);
     props.setUser(bear);
