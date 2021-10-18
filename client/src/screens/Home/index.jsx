@@ -11,8 +11,8 @@ const Home = () => {
       <div id="home-screen-contents">
         <h1 className="logo">THE CUB CLUB</h1>
         <div className="inner-content">
-          <h2 className="heading">Welcome!</h2>
-          <h2 className="textfield">**Instructions will go here**</h2>
+          <h2 className="heading">WELCOME</h2>
+          <h2 className="textfield">Use the W A S D keys to move around! < br/> Sign up to create your bear and get started.</h2>
           <Link className="btn-1-home" to="/log-in">
             <button className="home-login-button">Login</button>
           </Link>
