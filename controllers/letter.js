@@ -24,7 +24,7 @@ const findLetterById = async (req, res) => {
     if (!letter) {
       return res.status(404).json({ message: "Letter not found" })
     }
-    return res.status(200).json({ letter });
+    return res.status(200).json(letter);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -33,8 +33,8 @@ const findLetterById = async (req, res) => {
 const findLettersByRecipient = async (req, res) => {
   try {
     const { recipient } = req.params;
-    const letters = await Letter.find({ recipient });
-    res.status(200).json(letters);
+    const letters = await Letter.find({ recipient }).populate("sender");
+    return res.status(200).json(letters);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -51,26 +51,29 @@ const sendLetter = async (req, res) => {
     };
     const letter = new Letter(newLetter);
     await letter.save();
-    res.status(201).json({message: "Letter sent!"});
+    return res.status(201).json({message: "Letter sent!"});
   } catch (error) {
     res.status(500).json(error);
   }
 };
 
-const deleteLetter = async (req, res) => {
+const destroyLetter = async (req, res) => {
   try {
-    const id = req.params;
-    const letter = await findByIdAndDelete(id);
-    res.status(204).json(letter)
+    const { id } = req.params;
+    const letter = await Letter.findByIdAndDelete(id);
+    if (!letter) {
+      return res.status(404).json({ message: "Letter not found" })
+    }
+    return res.status(204).json(letter)
   } catch (error) {
     res.status(500).json(error);
   }
-};
+}; 
 
 module.exports = { 
   findAllLetters, 
   sendLetter,
   findLetterById,
   findLettersByRecipient,
-  deleteLetter
+  destroyLetter
 };

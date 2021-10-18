@@ -7,6 +7,6 @@ letterRouter.get("/all", letterController.findAllLetters);
 letterRouter.get("/:recipient", letterController.findLettersByRecipient);
 letterRouter.get("/read/:id", letterController.findLetterById);
 letterRouter.post("/new-letter", letterController.sendLetter);
-letterRouter.delete("/delete/:id", letterController.deleteLetter);
+letterRouter.delete("/delete/:id", letterController.destroyLetter);
 
 module.exports = letterRouter;
