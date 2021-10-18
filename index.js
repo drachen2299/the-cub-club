@@ -28,8 +28,8 @@ app.get("/api", (req, res) => {
   res.status(200).json({letter:  "Welcome to root route!"});
 });
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/public", "index.html"));
-});
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+})
 
 io.on('connection', (socket) => {
   socket.join('Overworld');
