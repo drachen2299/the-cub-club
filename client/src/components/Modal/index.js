@@ -38,11 +38,8 @@ const Modal = (props) => {
   useEffect(() => {
     setSender(props.user);
      getUsers().then((newUsers) => {
-        console.log(newUsers);
         setUsers(newUsers);
-      })
-    
-    console.log(users);
+      });
   }, [])
 
   return (

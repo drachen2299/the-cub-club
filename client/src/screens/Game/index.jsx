@@ -21,7 +21,6 @@ const Game = (props) => {
     });
   }, [selectedTile, socket, user.username]);
   useEffect(() => {
-    console.log(room);
     socket.emit("add member", {
       username: user.username,
       bear: user.bear.fur,
