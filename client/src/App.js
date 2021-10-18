@@ -16,7 +16,7 @@ function App() {
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
-    const newSocket = io(`http://localhost:3001`);
+    const newSocket = io(process.env.PORT);
     newSocket.on("member added", (res) => {
       setRoom(res);
     });
