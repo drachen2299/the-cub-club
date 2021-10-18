@@ -11,9 +11,9 @@ export const sendLetter = async (data) => {
   }
 };
 
-export const checkMail = async (user) => {
+export const checkMail = async (id) => {
   try {
-    const response = await axios.get(`${apiURL}/letters/${user}`);
+    const response = await axios.get(`${apiURL}/letters/${id}`);
     return response.data;
   } catch (e) {
     console.error(e.message);
@@ -22,12 +22,18 @@ export const checkMail = async (user) => {
 
 export const readLetter = async (id) => {
   try {
-    
+    const response = await axios.get(`${apiURL}/letters/read/${id}`);
+    return response.data;
   } catch (e) {
     console.error(e.message);
   }
 };
 
 export const deleteLetter = async (id) => {
-
+  try {
+    const response = await axios.delete(`${apiURL}/letters/delete/${id}`);
+    return response.data;
+  } catch (e) {
+    console.error(e.message);
+  }
 };

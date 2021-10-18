@@ -32,8 +32,8 @@ const findLetterById = async (req, res) => {
 
 const findLettersByRecipient = async (req, res) => {
   try {
-    const { recipient } = req.params;
-    const letters = await Letter.find({ recipient }).populate("sender");
+    const { id } = req.params;
+    const letters = await Letter.find({ id }).populate("sender");
     return res.status(200).json(letters);
   } catch (error) {
     res.status(500).json(error);
