@@ -78,7 +78,7 @@ const Modal = (props) => {
                       <label htmlFor="message">
                         <h2 className="Header">Message:</h2>
                       </label>
-                      <input id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
+                      <input class="modalInput" id="message" type="text" value={letter} onChange={(e) => setLetter(e.target.value)}/>
                       {!isValidLetter ? <div className="ErrorMessage">Letter is empty!</div> : <div></div>}
                       {!isValidRecipient ? <div className="ErrorMessage">Pick someone to send your letter to!</div> : <div></div>}
                       <button className="SubmitButton" type="submit">Send!</button>

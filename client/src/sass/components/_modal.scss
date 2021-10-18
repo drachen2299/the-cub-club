@@ -9,6 +9,8 @@
   border-radius: 5px;
   min-height: 100px;
   margin: 10px;
+  overflow: auto;
+  max-height: 200px;
 }
 
 .ExitButton {
@@ -83,6 +85,10 @@
 .SubmitButton {
   background: none;
   font-family: "Modak", cursive;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: $secondary-txt-color;
+  padding: 5px;
   @include titles;
 }
 
@@ -92,5 +98,20 @@
   justify-content: center;
   color: $secondary-txt-color;
   font-family: $main-txt-font-cursive;
+}
+
+.recipient {
+  font-family: $main-txt-font-cursive;
+  color: $secondary-txt-color;
+  font-weight: normal;
+  padding: 5px;
+}
+
+.modalInput {
+  border: 2px solid $main-txt-color;
+  height: 25px;
+  color: $secondary-txt-color;
+  background: transparent;
+  border-radius: 5px;
 }
 
